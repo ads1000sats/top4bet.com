@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ล็อคบัญชีธนาคาร - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ระบบ</span><i class="fas fa-chevron-right"></i><span class="active">ล็อคบัญชีธนาคาร</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ล็อคบัญชีธนาคาร 🔒</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่มบัญชีที่ล็อค</button></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-lock"></i></div><div class="stat-info"><h3>25</h3><p>บัญชีที่ถูกล็อค</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-exclamation-triangle"></i></div><div class="stat-info"><h3>5</h3><p>รอตรวจสอบ</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>#</th><th>ธนาคาร</th><th>เลขบัญชี</th><th>ชื่อบัญชี</th><th>เหตุผล</th><th>วันที่ล็อค</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td><i class="fas fa-university text-success"></i> กสิกรไทย</td><td>xxx-x-xx111-x</td><td>สมชาย โกง</td><td><span class="tag tag-red">โกง</span></td><td>05/12/2024</td><td><button class="btn btn-sm btn-success"><i class="fas fa-unlock"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                    <tr><td>2</td><td><i class="fas fa-university text-purple"></i> ไทยพาณิชย์</td><td>xxx-x-xx222-x</td><td>สมหญิง หลอก</td><td><span class="tag tag-red">หลอกลวง</span></td><td>04/12/2024</td><td><button class="btn btn-sm btn-success"><i class="fas fa-unlock"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                    <tr><td>3</td><td><i class="fas fa-university text-info"></i> กรุงเทพ</td><td>xxx-x-xx333-x</td><td>มานะ ผิดกฎ</td><td><span class="tag tag-yellow">ผิดกฎ</span></td><td>03/12/2024</td><td><button class="btn btn-sm btn-success"><i class="fas fa-unlock"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.text-purple{color:#722ed1}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

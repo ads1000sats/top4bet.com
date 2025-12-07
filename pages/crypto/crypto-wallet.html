@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>Crypto</span><i class="fas fa-chevron-right"></i><span class="active">Wallet</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">Crypto Wallet</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon" style="background:#F7931A"><i class="fab fa-bitcoin"></i></div><div class="stat-info"><h3>0.5234 BTC</h3><p>≈ ฿ 850,000</p></div></div>
+                    <div class="stat-card"><div class="stat-icon" style="background:#627EEA"><i class="fab fa-ethereum"></i></div><div class="stat-info"><h3>12.45 ETH</h3><p>≈ ฿ 1,250,000</p></div></div>
+                    <div class="stat-card"><div class="stat-icon" style="background:#26A17B"><i class="fas fa-dollar-sign"></i></div><div class="stat-info"><h3>50,000 USDT</h3><p>≈ ฿ 1,750,000</p></div></div>
+                    <div class="stat-card"><div class="stat-icon" style="background:#FF0013"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>100,000 TRX</h3><p>≈ ฿ 350,000</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">รายการ Wallet</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>Coin</th><th>Address</th><th>ยอดคงเหลือ</th><th>มูลค่า (THB)</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td><i class="fab fa-bitcoin" style="color:#F7931A"></i> Bitcoin</td><td><code>bc1q...xyz</code></td><td>0.5234 BTC</td><td>฿ 850,000</td><td><span class="tag tag-green">Active</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td><i class="fab fa-ethereum" style="color:#627EEA"></i> Ethereum</td><td><code>0x1234...abcd</code></td><td>12.45 ETH</td><td>฿ 1,250,000</td><td><span class="tag tag-green">Active</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td><i class="fas fa-dollar-sign" style="color:#26A17B"></i> USDT (TRC20)</td><td><code>TXyz...123</code></td><td>50,000 USDT</td><td>฿ 1,750,000</td><td><span class="tag tag-green">Active</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td><i class="fas fa-coins" style="color:#FF0013"></i> TRON</td><td><code>TRX...456</code></td><td>100,000 TRX</td><td>฿ 350,000</td><td><span class="tag tag-green">Active</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

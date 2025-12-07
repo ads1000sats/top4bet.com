@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คาสิโน - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>เกม</span><i class="fas fa-chevron-right"></i><span class="active">คาสิโน</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">จัดการคาสิโน</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-dice"></i></div><div class="stat-info"><h3>15</h3><p>ค่ายเกมทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-gamepad"></i></div><div class="stat-info"><h3>1,250</h3><p>เกมทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-users"></i></div><div class="stat-info"><h3>456</h3><p>ผู้เล่นวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 1.5M</h3><p>ยอดเดิมพันวันนี้</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ค่ายเกม</h3></div>
+                    <div class="card-body">
+                        <div class="provider-grid">
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-dice-d20"></i></div><div class="provider-info"><strong>PG Soft</strong><small>250 เกม</small></div><span class="tag tag-green">Active</span></div>
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-gem"></i></div><div class="provider-info"><strong>Pragmatic Play</strong><small>180 เกม</small></div><span class="tag tag-green">Active</span></div>
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-star"></i></div><div class="provider-info"><strong>JILI</strong><small>120 เกม</small></div><span class="tag tag-green">Active</span></div>
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-crown"></i></div><div class="provider-info"><strong>Joker Gaming</strong><small>150 เกม</small></div><span class="tag tag-green">Active</span></div>
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-bolt"></i></div><div class="provider-info"><strong>Spade Gaming</strong><small>100 เกม</small></div><span class="tag tag-green">Active</span></div>
+                            <div class="provider-card"><div class="provider-logo"><i class="fas fa-fire"></i></div><div class="provider-info"><strong>AMB Poker</strong><small>50 เกม</small></div><span class="tag tag-gray">Inactive</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.provider-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:992px){.provider-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:576px){.provider-grid{grid-template-columns:1fr}}.provider-card{display:flex;align-items:center;gap:12px;padding:16px;border:1px solid #e8e8e8;border-radius:8px}.provider-logo{width:50px;height:50px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:24px}.provider-info{flex:1}.provider-info strong{display:block}.provider-info small{color:#888}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

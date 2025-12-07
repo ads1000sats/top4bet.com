@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอมมิชชั่นรายเดือน - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>รายงาน</span><i class="fas fa-chevron-right"></i><span class="active">คอมมิชชั่นรายเดือน</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">คอมมิชชั่นรายเดือน</h1></div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="filter-row">
+                            <div class="filter-item"><label>เดือน</label><select class="form-control"><option>ธันวาคม 2024</option><option>พฤศจิกายน 2024</option><option>ตุลาคม 2024</option></select></div>
+                            <div class="filter-item"><label>ประเภท</label><select class="form-control"><option>ทั้งหมด</option><option>หวย</option><option>คาสิโน</option></select></div>
+                            <div class="filter-item"><button class="btn btn-primary"><i class="fas fa-search"></i> ค้นหา</button><button class="btn btn-success"><i class="fas fa-file-excel"></i> Export</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 1,850,000</h3><p>คอมมิชชั่นเดือนนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-users"></i></div><div class="stat-info"><h3>45</h3><p>Agent ที่ได้รับ</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-user-tie"></i></div><div class="stat-info"><h3>12</h3><p>Master ที่ได้รับ</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>#</th><th>ผู้ใช้</th><th>ประเภท</th><th>ยอดเดิมพัน</th><th>คอมมิชชั่น</th><th>สถานะ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td><strong>master001</strong></td><td><span class="tag tag-blue">Master</span></td><td>฿ 25,000,000</td><td class="text-success">฿ 500,000</td><td><span class="tag tag-green">จ่ายแล้ว</span></td></tr>
+                                    <tr><td>2</td><td><strong>agent001</strong></td><td><span class="tag tag-purple">Agent</span></td><td>฿ 10,000,000</td><td class="text-success">฿ 300,000</td><td><span class="tag tag-green">จ่ายแล้ว</span></td></tr>
+                                    <tr><td>3</td><td><strong>agent002</strong></td><td><span class="tag tag-purple">Agent</span></td><td>฿ 8,000,000</td><td class="text-success">฿ 240,000</td><td><span class="tag tag-yellow">รอจ่าย</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.tag-purple{background:#722ed1;color:white}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

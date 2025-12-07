@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มินิเกม เป่ายิ้งฉุบ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>มินิเกม</span><i class="fas fa-chevron-right"></i><span class="active">เป่ายิ้งฉุบ</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">✊✌️🖐️ มินิเกม เป่ายิ้งฉุบ</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-hand-rock"></i></div><div class="stat-info"><h3>1,890</h3><p>รอบเล่นวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 380,000</h3><p>ยอดเดิมพันวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-trophy"></i></div><div class="stat-info"><h3>฿ 320,000</h3><p>ยอดจ่ายวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-chart-line"></i></div><div class="stat-info"><h3>฿ 60,000</h3><p>กำไรวันนี้</p></div></div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header"><h3 class="card-title">ตั้งค่าเกม</h3></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group"><label>สถานะเกม</label><select class="form-control"><option value="1">เปิด</option><option value="0">ปิด</option></select></div>
+                                <div class="form-group"><label>แทงขั้นต่ำ</label><input type="number" class="form-control" value="10"></div>
+                                <div class="form-group"><label>แทงสูงสุด</label><input type="number" class="form-control" value="5000"></div>
+                                <div class="form-group"><label>อัตราจ่าย (ชนะ)</label><input type="number" class="form-control" value="1.95" step="0.01"></div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ประวัติการเล่นล่าสุด</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>เวลา</th><th>สมาชิก</th><th>เดิมพัน</th><th>ผู้เล่น</th><th>ระบบ</th><th>ผลลัพธ์</th><th>ได้/เสีย</th></tr></thead>
+                                <tbody>
+                                    <tr><td>14:30:25</td><td>user001</td><td>฿500</td><td>✊ ค้อน</td><td>✌️ กรรไกร</td><td><span class="tag tag-green">ชนะ</span></td><td class="text-success">+฿475</td></tr>
+                                    <tr><td>14:29:15</td><td>user015</td><td>฿1,000</td><td>🖐️ กระดาษ</td><td>✊ ค้อน</td><td><span class="tag tag-green">ชนะ</span></td><td class="text-success">+฿950</td></tr>
+                                    <tr><td>14:28:05</td><td>user023</td><td>฿200</td><td>✌️ กรรไกร</td><td>✊ ค้อน</td><td><span class="tag tag-red">แพ้</span></td><td class="text-danger">-฿200</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

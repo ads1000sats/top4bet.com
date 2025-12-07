@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตั้งค่าเว็บไซต์ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ตั้งค่า</span><i class="fas fa-chevron-right"></i><span class="active">เว็บไซต์</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ตั้งค่าเว็บไซต์</h1></div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ข้อมูลทั่วไป</h3></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group"><label>ชื่อเว็บไซต์</label><input type="text" class="form-control" value="HUAY"></div>
+                                <div class="form-group"><label>ชื่อย่อ</label><input type="text" class="form-control" value="HUAY"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Title (SEO)</label><input type="text" class="form-control" value="HUAY - เว็บหวยออนไลน์อันดับ 1"></div>
+                                <div class="form-group"><label>Description (SEO)</label><input type="text" class="form-control" value="เว็บหวยออนไลน์ที่ดีที่สุด จ่ายจริง จ่ายเต็ม"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label>Logo</label><div class="upload-area"><i class="fas fa-cloud-upload-alt"></i><span>อัพโหลดโลโก้</span></div></div>
+                                <div class="form-group"><label>Favicon</label><div class="upload-area"><i class="fas fa-cloud-upload-alt"></i><span>อัพโหลด Favicon</span></div></div>
+                            </div>
+                            <div class="form-section"><h4>ติดต่อ</h4>
+                                <div class="form-row">
+                                    <div class="form-group"><label>LINE ID</label><input type="text" class="form-control" value="@huay-support"></div>
+                                    <div class="form-group"><label>โทรศัพท์</label><input type="text" class="form-control" value="02-xxx-xxxx"></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.upload-area{border:2px dashed #d9d9d9;border-radius:8px;padding:40px;text-align:center;cursor:pointer;transition:all 0.3s}.upload-area:hover{border-color:var(--primary-color);background:#f0f7ff}.upload-area i{font-size:32px;color:#999;display:block;margin-bottom:8px}.upload-area span{color:#666}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

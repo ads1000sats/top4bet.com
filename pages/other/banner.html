@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการ Banner - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ประชาสัมพันธ์</span><i class="fas fa-chevron-right"></i><span class="active">Banner</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">จัดการ Banner</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่ม Banner</button></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="banner-grid">
+                            <div class="banner-item"><div class="banner-image"><i class="fas fa-image"></i><span>Banner 1</span></div><div class="banner-info"><strong>โปรโมชั่นปีใหม่ 2025</strong><p class="text-muted">ลิงก์: /promotion/newyear</p><div class="banner-actions"><span class="tag tag-green">แสดง</span><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></div></div></div>
+                            <div class="banner-item"><div class="banner-image"><i class="fas fa-image"></i><span>Banner 2</span></div><div class="banner-info"><strong>หวยรัฐบาล 16 ธ.ค.</strong><p class="text-muted">ลิงก์: /lottery/gov</p><div class="banner-actions"><span class="tag tag-green">แสดง</span><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></div></div></div>
+                            <div class="banner-item"><div class="banner-image"><i class="fas fa-image"></i><span>Banner 3</span></div><div class="banner-info"><strong>แนะนำเพื่อน รับ 100</strong><p class="text-muted">ลิงก์: /referral</p><div class="banner-actions"><span class="tag tag-gray">ซ่อน</span><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.banner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}@media(max-width:992px){.banner-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:576px){.banner-grid{grid-template-columns:1fr}}.banner-item{border:1px solid #e8e8e8;border-radius:8px;overflow:hidden}.banner-image{height:150px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;flex-direction:column;align-items:center;justify-content:center;color:white}.banner-image i{font-size:48px;margin-bottom:8px}.banner-info{padding:16px}.banner-info strong{display:block;margin-bottom:4px}.banner-actions{display:flex;align-items:center;gap:8px;margin-top:12px}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

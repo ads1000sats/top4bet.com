@@ -1,0 +1,104 @@
+/* Thai Bank Colors & Icons */
+
+/* Bank Logo Icons (SVG Data URI) */
+.bank-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* KBank - Kasikorn */
+.bank-icon-kbank {
+    background-color: #138f2d;
+    border-radius: 4px;
+}
+
+/* SCB - Siam Commercial Bank */
+.bank-icon-scb {
+    background-color: #4e2a82;
+    border-radius: 4px;
+}
+
+/* BBL - Bangkok Bank */
+.bank-icon-bbl {
+    background-color: #1e4598;
+    border-radius: 4px;
+}
+
+/* KTB - Krung Thai Bank */
+.bank-icon-ktb {
+    background-color: #1ba5e0;
+    border-radius: 4px;
+}
+
+/* TTB - TMBThanachart */
+.bank-icon-ttb {
+    background-color: #fc4f1f;
+    border-radius: 4px;
+}
+
+/* GSB - Government Savings Bank */
+.bank-icon-gsb {
+    background-color: #eb198d;
+    border-radius: 4px;
+}
+
+/* BAY - Bank of Ayudhya (Krungsri) */
+.bank-icon-bay {
+    background-color: #fec43b;
+    border-radius: 4px;
+}
+
+/* CIMB */
+.bank-icon-cimb {
+    background-color: #7b0c2e;
+    border-radius: 4px;
+}
+
+/* UOB */
+.bank-icon-uob {
+    background-color: #0b3979;
+    border-radius: 4px;
+}
+
+/* LH Bank */
+.bank-icon-lhb {
+    background-color: #6d6e71;
+    border-radius: 4px;
+}
+
+/* TISCO */
+.bank-icon-tisco {
+    background-color: #12549f;
+    border-radius: 4px;
+}
+
+/* KK - Kiatnakin */
+.bank-icon-kk {
+    background-color: #199cc5;
+    border-radius: 4px;
+}
+
+/* ICBC */
+.bank-icon-icbc {
+    background-color: #c50f1f;
+    border-radius: 4px;
+}
+
+/* TrueMoney Wallet */
+.bank-icon-truemoney {
+    background-color: #f37021;
+    border-radius: 4px;
+}
+
+/* PromptPay */
+.bank-icon-promptpay {
+    background: linear-gradient(135deg, #1e4598 0%, #0098d4 100%);
+    border-radius: 4px;
+}
+

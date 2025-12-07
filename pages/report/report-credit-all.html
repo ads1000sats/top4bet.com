@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานเครดิตทั้งหมด - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>รายงาน</span><i class="fas fa-chevron-right"></i><span class="active">รายงานเครดิตทั้งหมด</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">รายงานเครดิตทั้งหมด</h1></div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="filter-row">
+                            <div class="filter-item"><label>วันที่เริ่มต้น</label><input type="date" class="form-control"></div>
+                            <div class="filter-item"><label>วันที่สิ้นสุด</label><input type="date" class="form-control"></div>
+                            <div class="filter-item"><label>ประเภท</label><select class="form-control"><option>ทั้งหมด</option><option>เพิ่มเครดิต</option><option>ลดเครดิต</option></select></div>
+                            <div class="filter-item"><button class="btn btn-primary"><i class="fas fa-search"></i> ค้นหา</button><button class="btn btn-success"><i class="fas fa-file-excel"></i> Export</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-plus-circle"></i></div><div class="stat-info"><h3>฿ 5,250,000</h3><p>เพิ่มเครดิตทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-minus-circle"></i></div><div class="stat-info"><h3>฿ 3,150,000</h3><p>ลดเครดิตทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-balance-scale"></i></div><div class="stat-info"><h3>฿ 2,100,000</h3><p>ยอดคงเหลือ</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>วันที่</th><th>ผู้ใช้</th><th>ประเภท</th><th>จำนวน</th><th>คงเหลือ</th><th>หมายเหตุ</th><th>ผู้ทำรายการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>05/12/2024 14:30</td><td>agent001</td><td><span class="tag tag-green">เพิ่ม</span></td><td class="text-success">+฿ 100,000</td><td>฿ 250,000</td><td>เพิ่มเครดิตประจำเดือน</td><td>admin</td></tr>
+                                    <tr><td>05/12/2024 10:15</td><td>master001</td><td><span class="tag tag-red">ลด</span></td><td class="text-danger">-฿ 50,000</td><td>฿ 450,000</td><td>หักค่าคอมมิชชั่น</td><td>admin</td></tr>
+                                    <tr><td>04/12/2024 16:45</td><td>agent002</td><td><span class="tag tag-green">เพิ่ม</span></td><td class="text-success">+฿ 200,000</td><td>฿ 350,000</td><td>เพิ่มเครดิตพิเศษ</td><td>admin</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

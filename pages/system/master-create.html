@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่ม Master - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ระบบ</span><i class="fas fa-chevron-right"></i><span>Master</span><i class="fas fa-chevron-right"></i><span class="active">เพิ่ม Master</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">เพิ่ม Master ใหม่</h1><a href="system-master.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> กลับ</a></div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ข้อมูล Master</h3></div>
+                    <div class="card-body">
+                        <form id="masterForm">
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label required">ชื่อผู้ใช้</label><input type="text" class="form-control" name="username" required></div>
+                                <div class="form-group"><label class="form-label required">รหัสผ่าน</label><input type="password" class="form-control" name="password" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label required">ชื่อ-นามสกุล</label><input type="text" class="form-control" name="fullname" required></div>
+                                <div class="form-group"><label class="form-label required">เบอร์โทรศัพท์</label><input type="tel" class="form-control" name="phone" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label">LINE ID</label><input type="text" class="form-control" name="line_id"></div>
+                                <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" name="email"></div>
+                            </div>
+                            <div class="form-section"><h4>ตั้งค่าคอมมิชชั่น</h4>
+                                <div class="form-row">
+                                    <div class="form-group"><label>คอมมิชชั่นหวย (%)</label><input type="number" class="form-control" value="7" min="0" max="100"></div>
+                                    <div class="form-group"><label>คอมมิชชั่นคาสิโน (%)</label><input type="number" class="form-control" value="5" min="0" max="100"></div>
+                                </div>
+                            </div>
+                            <div class="form-section"><h4>วงเงิน</h4>
+                                <div class="form-row">
+                                    <div class="form-group"><label>วงเงินเครดิต</label><input type="number" class="form-control" value="500000" min="0"></div>
+                                    <div class="form-group"><label>สถานะ</label><select class="form-control"><option value="active">เปิดใช้งาน</option><option value="inactive">ปิดใช้งาน</option></select></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="button" class="btn btn-secondary" onclick="history.back()">ยกเลิก</button><button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

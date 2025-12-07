@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - รายการฝากถอน (รอดำเนินการ)</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+</head>
+<body>
+    <div id="root">
+        <!-- Main Layout -->
+        <div class="ant-layout app-layout">
+            <!-- Sidebar -->
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                    </a>
+                </div>
+                
+                <nav class="sidebar-menu" id="sidebarMenu">
+                    <!-- Menu items will be loaded by JS -->
+                </nav>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <div class="ant-layout main-layout">
+                <!-- Header -->
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">ฝาก/ถอน</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">รอดำเนินการ</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">5</span>
+                        </div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Content -->
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <!-- Page Title -->
+                        <div class="page-header">
+                            <h1 class="page-title">รายการฝากถอน</h1>
+                            <p class="page-subtitle">รอดำเนินการ</p>
+                        </div>
+                        
+                        <!-- Stats Cards -->
+                        <div class="stats-row">
+                            <div class="stat-card stat-orange">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingDepositCount">23</span>
+                                    <span class="stat-label">รอฝาก</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-purple">
+                                <div class="stat-icon">
+                                    <i class="fas fa-hourglass-half"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingWithdrawCount">18</span>
+                                    <span class="stat-label">รอถอน</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-green">
+                                <div class="stat-icon">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingDepositAmount">฿ 458,900</span>
+                                    <span class="stat-label">ยอดฝากรอดำเนินการ</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-red">
+                                <div class="stat-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingWithdrawAmount">฿ 234,500</span>
+                                    <span class="stat-label">ยอดถอนรอดำเนินการ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tabs -->
+                        <div class="content-card">
+                            <div class="tabs-header">
+                                <button class="tab-btn active" data-tab="deposit">
+                                    <i class="fas fa-arrow-down"></i>
+                                    รายการฝาก
+                                    <span class="tab-badge">23</span>
+                                </button>
+                                <button class="tab-btn" data-tab="withdraw">
+                                    <i class="fas fa-arrow-up"></i>
+                                    รายการถอน
+                                    <span class="tab-badge">18</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Deposit Tab -->
+                            <div class="tab-content active" id="depositTab">
+                                <div class="card-body">
+                                    <table class="ant-table">
+                                        <thead>
+                                            <tr>
+                                                <th>เวลา</th>
+                                                <th>Username</th>
+                                                <th>จำนวน</th>
+                                                <th>ธนาคาร</th>
+                                                <th>เลขบัญชี</th>
+                                                <th>สถานะ</th>
+                                                <th>จัดการ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="depositTableBody">
+                                            <!-- Will be populated by JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Withdraw Tab -->
+                            <div class="tab-content" id="withdrawTab">
+                                <div class="card-body">
+                                    <table class="ant-table">
+                                        <thead>
+                                            <tr>
+                                                <th>เวลา</th>
+                                                <th>Username</th>
+                                                <th>จำนวน</th>
+                                                <th>ธนาคาร</th>
+                                                <th>เลขบัญชี</th>
+                                                <th>สถานะ</th>
+                                                <th>จัดการ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="withdrawTableBody">
+                                            <!-- Will be populated by JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirm Modal -->
+    <div class="modal-overlay" id="confirmModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon" id="confirmIcon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <h3 class="modal-title" id="confirmTitle">ยืนยันการดำเนินการ</h3>
+            <p class="modal-message" id="confirmMessage">คุณต้องการดำเนินการนี้หรือไม่?</p>
+            <div class="modal-actions">
+                <button class="ant-btn" id="cancelConfirm">ยกเลิก</button>
+                <button class="ant-btn ant-btn-primary" id="confirmAction">ยืนยัน</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../app.js"></script>
+    <script>
+        // Deposit/Withdraw page specific JS
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDepositTable();
+            loadWithdrawTable();
+            initTabs();
+        });
+        
+        function initTabs() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tab = this.dataset.tab;
+                    
+                    // Update buttons
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update content
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    document.getElementById(tab + 'Tab').classList.add('active');
+                });
+            });
+        }
+        
+        function loadDepositTable() {
+            const deposits = [
+                { time: '10:45:23', username: 'user001', amount: 5000, bank: 'กสิกร', account: 'xxx-x-x1234-x', status: 'pending' },
+                { time: '10:42:15', username: 'user015', amount: 10000, bank: 'ไทยพาณิชย์', account: 'xxx-x-x5678-x', status: 'pending' },
+                { time: '10:38:47', username: 'user023', amount: 3000, bank: 'กรุงเทพ', account: 'xxx-x-x9012-x', status: 'pending' },
+                { time: '10:35:12', username: 'user007', amount: 15000, bank: 'กรุงไทย', account: 'xxx-x-x3456-x', status: 'pending' },
+                { time: '10:32:55', username: 'user042', amount: 2000, bank: 'ทหารไทยธนชาต', account: 'xxx-x-x7890-x', status: 'pending' },
+                { time: '10:28:33', username: 'user056', amount: 50000, bank: 'กสิกร', account: 'xxx-x-x2345-x', status: 'pending' },
+                { time: '10:25:18', username: 'user089', amount: 1000, bank: 'ออมสิน', account: 'xxx-x-x6789-x', status: 'pending' },
+                { time: '10:22:41', username: 'user034', amount: 8000, bank: 'ไทยพาณิชย์', account: 'xxx-x-x0123-x', status: 'pending' }
+            ];
+            
+            const tbody = document.getElementById('depositTableBody');
+            tbody.innerHTML = deposits.map(item => `
+                <tr>
+                    <td>${item.time}</td>
+                    <td><span class="text-primary">${item.username}</span></td>
+                    <td class="text-success text-right">+฿ ${item.amount.toLocaleString()}</td>
+                    <td>
+                        <span class="bank-badge ${getBankClass(item.bank)}">
+                            ${item.bank}
+                        </span>
+                    </td>
+                    <td>${item.account}</td>
+                    <td>
+                        <span class="ant-tag ant-tag-processing">
+                            <i class="fas fa-clock"></i> รอดำเนินการ
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="ant-btn ant-btn-sm ant-btn-success" onclick="approveDeposit('${item.username}', ${item.amount})">
+                                <i class="fas fa-check"></i> อนุมัติ
+                            </button>
+                            <button class="ant-btn ant-btn-sm ant-btn-danger" onclick="rejectDeposit('${item.username}')">
+                                <i class="fas fa-times"></i> ปฏิเสธ
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        function loadWithdrawTable() {
+            const withdraws = [
+                { time: '10:44:12', username: 'user012', amount: 20000, bank: 'กสิกร', account: '123-4-56789-0', status: 'pending' },
+                { time: '10:41:33', username: 'user028', amount: 5000, bank: 'ไทยพาณิชย์', account: '234-5-67890-1', status: 'pending' },
+                { time: '10:37:55', username: 'user045', amount: 15000, bank: 'กรุงเทพ', account: '345-6-78901-2', status: 'pending' },
+                { time: '10:34:18', username: 'user067', amount: 8000, bank: 'กรุงไทย', account: '456-7-89012-3', status: 'pending' },
+                { time: '10:30:42', username: 'user089', amount: 30000, bank: 'ทหารไทยธนชาต', account: '567-8-90123-4', status: 'pending' },
+                { time: '10:27:15', username: 'user003', amount: 12000, bank: 'กสิกร', account: '678-9-01234-5', status: 'pending' }
+            ];
+            
+            const tbody = document.getElementById('withdrawTableBody');
+            tbody.innerHTML = withdraws.map(item => `
+                <tr>
+                    <td>${item.time}</td>
+                    <td><span class="text-primary">${item.username}</span></td>
+                    <td class="text-danger text-right">-฿ ${item.amount.toLocaleString()}</td>
+                    <td>
+                        <span class="bank-badge ${getBankClass(item.bank)}">
+                            ${item.bank}
+                        </span>
+                    </td>
+                    <td>${item.account}</td>
+                    <td>
+                        <span class="ant-tag ant-tag-processing">
+                            <i class="fas fa-clock"></i> รอดำเนินการ
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="ant-btn ant-btn-sm ant-btn-success" onclick="approveWithdraw('${item.username}', ${item.amount})">
+                                <i class="fas fa-check"></i> อนุมัติ
+                            </button>
+                            <button class="ant-btn ant-btn-sm ant-btn-danger" onclick="rejectWithdraw('${item.username}')">
+                                <i class="fas fa-times"></i> ปฏิเสธ
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        function getBankClass(bank) {
+            const bankClasses = {
+                'กสิกร': 'bank-kbank',
+                'ไทยพาณิชย์': 'bank-scb',
+                'กรุงเทพ': 'bank-bbl',
+                'กรุงไทย': 'bank-ktb',
+                'ทหารไทยธนชาต': 'bank-ttb',
+                'ออมสิน': 'bank-gsb'
+            };
+            return bankClasses[bank] || '';
+        }
+        
+        function approveDeposit(username, amount) {
+            showConfirm(
+                'success',
+                'อนุมัติการฝาก',
+                `ยืนยันอนุมัติการฝาก ฿${amount.toLocaleString()} ให้ ${username}?`,
+                function() {
+                    // Handle approve
+                    alert('อนุมัติเรียบร้อย!');
+                    hideConfirm();
+                }
+            );
+        }
+        
+        function rejectDeposit(username) {
+            showConfirm(
+                'error',
+                'ปฏิเสธการฝาก',
+                `ยืนยันปฏิเสธการฝากของ ${username}?`,
+                function() {
+                    // Handle reject
+                    alert('ปฏิเสธเรียบร้อย!');
+                    hideConfirm();
+                }
+            );
+        }
+        
+        function approveWithdraw(username, amount) {
+            showConfirm(
+                'success',
+                'อนุมัติการถอน',
+                `ยืนยันอนุมัติการถอน ฿${amount.toLocaleString()} ให้ ${username}?`,
+                function() {
+                    // Handle approve
+                    alert('อนุมัติเรียบร้อย!');
+                    hideConfirm();
+                }
+            );
+        }
+        
+        function rejectWithdraw(username) {
+            showConfirm(
+                'error',
+                'ปฏิเสธการถอน',
+                `ยืนยันปฏิเสธการถอนของ ${username}?`,
+                function() {
+                    // Handle reject
+                    alert('ปฏิเสธเรียบร้อย!');
+                    hideConfirm();
+                }
+            );
+        }
+        
+        function showConfirm(type, title, message, callback) {
+            const modal = document.getElementById('confirmModal');
+            const icon = document.getElementById('confirmIcon');
+            
+            icon.className = 'modal-icon ' + type;
+            icon.innerHTML = type === 'success' ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-exclamation-circle"></i>';
+            
+            document.getElementById('confirmTitle').textContent = title;
+            document.getElementById('confirmMessage').textContent = message;
+            
+            document.getElementById('confirmAction').onclick = callback;
+            
+            modal.style.display = 'flex';
+        }
+        
+        function hideConfirm() {
+            document.getElementById('confirmModal').style.display = 'none';
+        }
+        
+        document.getElementById('cancelConfirm').addEventListener('click', hideConfirm);
+        document.getElementById('confirmModal').addEventListener('click', function(e) {
+            if (e.target === this) hideConfirm();
+        });
+    </script>
+</body>
+</html>
+

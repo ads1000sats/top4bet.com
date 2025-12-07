@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลสมาชิก - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>สมาชิก</span><i class="fas fa-chevron-right"></i><span class="active">ข้อมูลสมาชิก</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ข้อมูลสมาชิก: user001</h1><a href="member.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> กลับ</a></div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="member-avatar"><i class="fas fa-user-circle"></i></div>
+                                <h3>สมชาย ใจดี</h3>
+                                <p class="text-muted">user001</p>
+                                <span class="tag tag-green">ใช้งาน</span>
+                                <div class="member-balance mt-3"><p>ยอดเงินคงเหลือ</p><h2 class="text-success">฿ 15,250</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">ข้อมูลส่วนตัว</h3></div>
+                            <div class="card-body">
+                                <div class="info-grid">
+                                    <div class="info-item"><label>Username</label><span>user001</span></div>
+                                    <div class="info-item"><label>ชื่อ-นามสกุล</label><span>สมชาย ใจดี</span></div>
+                                    <div class="info-item"><label>เบอร์โทรศัพท์</label><span>081-xxx-xxxx</span></div>
+                                    <div class="info-item"><label>LINE ID</label><span>@user001</span></div>
+                                    <div class="info-item"><label>วันเกิด</label><span>15 มี.ค. 1990</span></div>
+                                    <div class="info-item"><label>วันที่สมัคร</label><span>1 ม.ค. 2024</span></div>
+                                    <div class="info-item"><label>Agent</label><span>agent001</span></div>
+                                    <div class="info-item"><label>VIP Level</label><span>Gold</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header"><h3 class="card-title">บัญชีธนาคาร</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>ธนาคาร</th><th>เลขบัญชี</th><th>ชื่อบัญชี</th><th>สถานะ</th></tr></thead>
+                                <tbody>
+                                    <tr><td><i class="fas fa-university text-success"></i> กสิกรไทย</td><td>xxx-x-xx123-x</td><td>สมชาย ใจดี</td><td><span class="tag tag-green">หลัก</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ประวัติธุรกรรมล่าสุด</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>วันที่</th><th>ประเภท</th><th>จำนวน</th><th>สถานะ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>05/12/2024 14:30</td><td>ฝาก</td><td class="text-success">+฿ 5,000</td><td><span class="tag tag-green">สำเร็จ</span></td></tr>
+                                    <tr><td>04/12/2024 10:15</td><td>ถอน</td><td class="text-danger">-฿ 2,000</td><td><span class="tag tag-green">สำเร็จ</span></td></tr>
+                                    <tr><td>03/12/2024 16:45</td><td>ฝาก</td><td class="text-success">+฿ 10,000</td><td><span class="tag tag-green">สำเร็จ</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.row{display:flex;flex-wrap:wrap;margin:-12px}.col-md-4{flex:0 0 33.333%;max-width:33.333%;padding:12px}.col-md-8{flex:0 0 66.666%;max-width:66.666%;padding:12px}@media(max-width:768px){.col-md-4,.col-md-8{flex:0 0 100%;max-width:100%}}.member-avatar{font-size:80px;color:#1890ff;margin-bottom:16px}.member-balance{background:#f6ffed;border:1px solid #b7eb8f;border-radius:8px;padding:16px}.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.info-item label{display:block;color:#888;font-size:12px;margin-bottom:4px}.info-item span{font-weight:600}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

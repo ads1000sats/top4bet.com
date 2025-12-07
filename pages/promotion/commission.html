@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอมมิชชั่น - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                </a>
+            </div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span>ระบบ</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="active">คอมมิชชั่น</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="header-item user-dropdown" id="userDropdown">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userName">admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="user-dropdown-menu" id="userDropdownMenu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user"></i> โปรไฟล์</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-key"></i> เปลี่ยนรหัสผ่าน</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../login.html" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">รายงานคอมมิชชั่น</h1>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs mb-4">
+                    <button class="tab-btn active" data-tab="monthly">รายเดือน</button>
+                    <button class="tab-btn" data-tab="weekly">รายสัปดาห์</button>
+                    <button class="tab-btn" data-tab="game">ตามเกม</button>
+                    <button class="tab-btn" data-tab="lottery">หวย</button>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="stats-grid mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>฿ 125,450</h3>
+                            <p>คอมมิชชั่นเดือนนี้</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>฿ 98,320</h3>
+                            <p>คอมมิชชั่นเดือนที่แล้ว</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>+27.6%</h3>
+                            <p>เปลี่ยนแปลง</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>45</h3>
+                            <p>Agent ที่มีคอมมิชชั่น</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="filter-row">
+                            <div class="filter-item">
+                                <label>เดือน</label>
+                                <select class="form-control">
+                                    <option value="12">ธันวาคม 2024</option>
+                                    <option value="11">พฤศจิกายน 2024</option>
+                                    <option value="10">ตุลาคม 2024</option>
+                                </select>
+                            </div>
+                            <div class="filter-item">
+                                <label>ประเภท</label>
+                                <select class="form-control">
+                                    <option value="">ทั้งหมด</option>
+                                    <option value="lottery">หวย</option>
+                                    <option value="casino">คาสิโน</option>
+                                    <option value="slot">สล็อต</option>
+                                </select>
+                            </div>
+                            <div class="filter-item">
+                                <label>Agent</label>
+                                <input type="text" class="form-control" placeholder="ค้นหา Agent...">
+                            </div>
+                            <div class="filter-item">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-search"></i> ค้นหา
+                                </button>
+                                <button class="btn btn-success">
+                                    <i class="fas fa-file-excel"></i> Export
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commission Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">รายการคอมมิชชั่น - ธันวาคม 2024</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="60">#</th>
+                                        <th>Agent</th>
+                                        <th>ยอดเดิมพัน</th>
+                                        <th>ยอดชนะ</th>
+                                        <th>ยอดแพ้</th>
+                                        <th>อัตราคอมมิชชั่น</th>
+                                        <th>คอมมิชชั่น</th>
+                                        <th>สถานะ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <strong>agent001</strong>
+                                                <small class="text-muted d-block">สมชาย ใจดี</small>
+                                            </div>
+                                        </td>
+                                        <td>฿ 1,250,000</td>
+                                        <td class="text-success">฿ 980,000</td>
+                                        <td class="text-danger">฿ 270,000</td>
+                                        <td>5%</td>
+                                        <td class="text-success"><strong>฿ 13,500</strong></td>
+                                        <td><span class="tag tag-green">จ่ายแล้ว</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <strong>agent002</strong>
+                                                <small class="text-muted d-block">สมหญิง รักดี</small>
+                                            </div>
+                                        </td>
+                                        <td>฿ 850,000</td>
+                                        <td class="text-success">฿ 620,000</td>
+                                        <td class="text-danger">฿ 230,000</td>
+                                        <td>5%</td>
+                                        <td class="text-success"><strong>฿ 11,500</strong></td>
+                                        <td><span class="tag tag-green">จ่ายแล้ว</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <strong>agent003</strong>
+                                                <small class="text-muted d-block">ประสิทธิ์ มั่งมี</small>
+                                            </div>
+                                        </td>
+                                        <td>฿ 2,100,000</td>
+                                        <td class="text-success">฿ 1,650,000</td>
+                                        <td class="text-danger">฿ 450,000</td>
+                                        <td>7%</td>
+                                        <td class="text-success"><strong>฿ 31,500</strong></td>
+                                        <td><span class="tag tag-yellow">รอจ่าย</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <strong>agent004</strong>
+                                                <small class="text-muted d-block">วิชัย รวยดี</small>
+                                            </div>
+                                        </td>
+                                        <td>฿ 560,000</td>
+                                        <td class="text-success">฿ 420,000</td>
+                                        <td class="text-danger">฿ 140,000</td>
+                                        <td>5%</td>
+                                        <td class="text-success"><strong>฿ 7,000</strong></td>
+                                        <td><span class="tag tag-yellow">รอจ่าย</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="user-info">
+                                                <strong>agent005</strong>
+                                                <small class="text-muted d-block">มานะ ขยันดี</small>
+                                            </div>
+                                        </td>
+                                        <td>฿ 3,500,000</td>
+                                        <td class="text-success">฿ 2,800,000</td>
+                                        <td class="text-danger">฿ 700,000</td>
+                                        <td>10%</td>
+                                        <td class="text-success"><strong>฿ 70,000</strong></td>
+                                        <td><span class="tag tag-green">จ่ายแล้ว</span></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="table-footer">
+                                        <td colspan="2"><strong>รวมทั้งหมด</strong></td>
+                                        <td><strong>฿ 8,260,000</strong></td>
+                                        <td class="text-success"><strong>฿ 6,470,000</strong></td>
+                                        <td class="text-danger"><strong>฿ 1,790,000</strong></td>
+                                        <td>-</td>
+                                        <td class="text-success"><strong>฿ 133,500</strong></td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination-wrapper">
+                            <div class="pagination-info">
+                                แสดง 1-5 จาก 45 รายการ
+                            </div>
+                            <div class="pagination">
+                                <button class="btn btn-sm" disabled><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn btn-sm btn-primary">1</button>
+                                <button class="btn btn-sm">2</button>
+                                <button class="btn btn-sm">3</button>
+                                <button class="btn btn-sm">...</button>
+                                <button class="btn btn-sm">9</button>
+                                <button class="btn btn-sm"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .tabs {
+            display: flex;
+            gap: 8px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0;
+        }
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            color: var(--primary-color);
+        }
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            font-weight: 600;
+        }
+        .table-footer {
+            background: rgba(0,0,0,0.03);
+        }
+        .table-footer td {
+            font-weight: 600;
+        }
+    </style>
+
+    <script src="../../app.js"></script>
+</body>
+</html>
+

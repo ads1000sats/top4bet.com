@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานการสมัคร - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>รายงาน</span><i class="fas fa-chevron-right"></i><span class="active">รายงานการสมัคร</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">รายงานการสมัครสมาชิก</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-user-plus"></i></div><div class="stat-info"><h3>156</h3><p>สมัครวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-users"></i></div><div class="stat-info"><h3>1,245</h3><p>สมัครเดือนนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-chart-line"></i></div><div class="stat-info"><h3>+15%</h3><p>เติบโต</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-percentage"></i></div><div class="stat-info"><h3>68%</h3><p>ฝากเงินแล้ว</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">สมาชิกใหม่วันนี้</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>เวลา</th><th>Username</th><th>ชื่อ</th><th>เบอร์โทร</th><th>Agent</th><th>ฝากแล้ว</th><th>สถานะ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>14:30:25</td><td>user001</td><td>สมชาย ใจดี</td><td>081-xxx-xxxx</td><td>agent001</td><td class="text-success">฿ 1,000</td><td><span class="tag tag-green">ใช้งาน</span></td></tr>
+                                    <tr><td>13:45:10</td><td>user002</td><td>สมหญิง รักดี</td><td>082-xxx-xxxx</td><td>agent002</td><td class="text-muted">-</td><td><span class="tag tag-yellow">รอฝาก</span></td></tr>
+                                    <tr><td>12:20:55</td><td>user003</td><td>มานะ ขยัน</td><td>083-xxx-xxxx</td><td>agent001</td><td class="text-success">฿ 5,000</td><td><span class="tag tag-green">ใช้งาน</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

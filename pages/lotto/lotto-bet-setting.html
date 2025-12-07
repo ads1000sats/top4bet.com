@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตั้งค่าการแทง - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>หวย</span><i class="fas fa-chevron-right"></i><span class="active">ตั้งค่าการแทง</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ตั้งค่าการแทง</h1></div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">อัตราจ่าย - หวยรัฐบาล</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>ประเภท</th><th>อัตราจ่าย</th><th>แทงขั้นต่ำ</th><th>แทงสูงสุด</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>3 ตัวบน</td><td><input type="number" class="form-control form-control-sm" value="900" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="1000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>3 ตัวโต๊ด</td><td><input type="number" class="form-control form-control-sm" value="150" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="1000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>2 ตัวบน</td><td><input type="number" class="form-control form-control-sm" value="90" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="5000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>2 ตัวล่าง</td><td><input type="number" class="form-control form-control-sm" value="90" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="5000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>วิ่งบน</td><td><input type="number" class="form-control form-control-sm" value="3.2" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="10000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>วิ่งล่าง</td><td><input type="number" class="form-control form-control-sm" value="4.2" style="width:100px"></td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="number" class="form-control form-control-sm" value="10000" style="width:100px"></td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-actions mt-3"><button class="btn btn-primary"><i class="fas fa-save"></i> บันทึกทั้งหมด</button></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

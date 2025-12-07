@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เครดิตสมาชิก - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>สมาชิก</span><i class="fas fa-chevron-right"></i><span class="active">เครดิตสมาชิก</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">จัดการเครดิตสมาชิก</h1></div>
+                <div class="card mb-4">
+                    <div class="card-header"><h3 class="card-title">เพิ่ม/ลดเครดิต</h3></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group"><label>ค้นหาสมาชิก</label><input type="text" class="form-control" placeholder="Username หรือ เบอร์โทร"></div>
+                                <div class="form-group"><label>ประเภท</label><select class="form-control"><option value="add">เพิ่มเครดิต</option><option value="deduct">ลดเครดิต</option></select></div>
+                                <div class="form-group"><label>จำนวน</label><input type="number" class="form-control" placeholder="0.00"></div>
+                                <div class="form-group"><label>หมายเหตุ</label><input type="text" class="form-control" placeholder="หมายเหตุ"></div>
+                                <div class="form-group"><button class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ประวัติเครดิตล่าสุด</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>วันที่</th><th>สมาชิก</th><th>ประเภท</th><th>จำนวน</th><th>คงเหลือ</th><th>หมายเหตุ</th><th>ผู้ทำรายการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>05/12/2024 14:30</td><td>user001</td><td><span class="tag tag-green">เพิ่ม</span></td><td class="text-success">+฿ 5,000</td><td>฿ 15,250</td><td>โบนัสวันเกิด</td><td>admin</td></tr>
+                                    <tr><td>05/12/2024 10:15</td><td>user015</td><td><span class="tag tag-red">ลด</span></td><td class="text-danger">-฿ 1,000</td><td>฿ 2,500</td><td>หักค่าโกง</td><td>admin</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

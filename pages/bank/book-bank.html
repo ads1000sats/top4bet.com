@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บัญชีฝาก-ถอน - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                </a>
+            </div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span>ระบบ</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="active">บัญชีฝาก-ถอน</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="header-item user-dropdown" id="userDropdown">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userName">admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="user-dropdown-menu" id="userDropdownMenu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user"></i> โปรไฟล์</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-key"></i> เปลี่ยนรหัสผ่าน</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../login.html" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">บัญชีฝาก-ถอน</h1>
+                    <div class="page-actions">
+                        <a href="book-bank-create.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> เพิ่มบัญชี
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="stats-grid mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>บัญชีเปิดใช้งาน</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-pause-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>บัญชีปิดชั่วคราว</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>฿ 1,250,000</h3>
+                            <p>ยอดเงินรวม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Accounts Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">รายการบัญชีธนาคาร</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="60">#</th>
+                                        <th>ธนาคาร</th>
+                                        <th>เลขบัญชี</th>
+                                        <th>ชื่อบัญชี</th>
+                                        <th>ประเภท</th>
+                                        <th>ยอดเงินคงเหลือ</th>
+                                        <th>สถานะ</th>
+                                        <th width="150">จัดการ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="bank-info">
+                                                <span class="bank-logo bank-kbank"></span>
+                                                <span>กสิกรไทย</span>
+                                            </div>
+                                        </td>
+                                        <td><code>xxx-x-xx123-x</code></td>
+                                        <td>บริษัท ทดสอบ จำกัด</td>
+                                        <td><span class="tag tag-green">ฝาก</span></td>
+                                        <td class="text-success">฿ 500,000.00</td>
+                                        <td><span class="tag tag-green">เปิดใช้งาน</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-info" title="ดูรายละเอียด">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-warning" title="แก้ไข">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" title="ปิดใช้งาน">
+                                                    <i class="fas fa-power-off"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="bank-info">
+                                                <span class="bank-logo bank-scb"></span>
+                                                <span>ไทยพาณิชย์</span>
+                                            </div>
+                                        </td>
+                                        <td><code>xxx-x-xx456-x</code></td>
+                                        <td>บริษัท ทดสอบ จำกัด</td>
+                                        <td><span class="tag tag-green">ฝาก</span></td>
+                                        <td class="text-success">฿ 350,000.00</td>
+                                        <td><span class="tag tag-green">เปิดใช้งาน</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-info" title="ดูรายละเอียด">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-warning" title="แก้ไข">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" title="ปิดใช้งาน">
+                                                    <i class="fas fa-power-off"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="bank-info">
+                                                <span class="bank-logo bank-krungthai"></span>
+                                                <span>กรุงไทย</span>
+                                            </div>
+                                        </td>
+                                        <td><code>xxx-x-xx789-x</code></td>
+                                        <td>บริษัท ทดสอบ จำกัด</td>
+                                        <td><span class="tag tag-orange">ถอน</span></td>
+                                        <td class="text-success">฿ 200,000.00</td>
+                                        <td><span class="tag tag-green">เปิดใช้งาน</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-info" title="ดูรายละเอียด">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-warning" title="แก้ไข">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" title="ปิดใช้งาน">
+                                                    <i class="fas fa-power-off"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="bank-info">
+                                                <span class="bank-logo bank-bbl"></span>
+                                                <span>กรุงเทพ</span>
+                                            </div>
+                                        </td>
+                                        <td><code>xxx-x-xx321-x</code></td>
+                                        <td>บริษัท ทดสอบ จำกัด</td>
+                                        <td><span class="tag tag-orange">ถอน</span></td>
+                                        <td class="text-success">฿ 150,000.00</td>
+                                        <td><span class="tag tag-gray">ปิดชั่วคราว</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-info" title="ดูรายละเอียด">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-warning" title="แก้ไข">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-success" title="เปิดใช้งาน">
+                                                    <i class="fas fa-power-off"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="bank-info">
+                                                <span class="bank-logo bank-truewallet"></span>
+                                                <span>TrueMoney Wallet</span>
+                                            </div>
+                                        </td>
+                                        <td><code>08x-xxx-xxxx</code></td>
+                                        <td>ทดสอบ ระบบ</td>
+                                        <td><span class="tag tag-blue">ฝาก/ถอน</span></td>
+                                        <td class="text-success">฿ 50,000.00</td>
+                                        <td><span class="tag tag-green">เปิดใช้งาน</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-info" title="ดูรายละเอียด">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-warning" title="แก้ไข">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" title="ปิดใช้งาน">
+                                                    <i class="fas fa-power-off"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../app.js"></script>
+</body>
+</html>
+

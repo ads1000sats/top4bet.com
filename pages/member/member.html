@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - รายการสมาชิก</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+</head>
+<body>
+    <div id="root">
+        <!-- Main Layout -->
+        <div class="ant-layout app-layout">
+            <!-- Sidebar -->
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                    </a>
+                </div>
+                
+                <nav class="sidebar-menu" id="sidebarMenu">
+                    <!-- Menu items will be loaded by JS -->
+                </nav>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <div class="ant-layout main-layout">
+                <!-- Header -->
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">สมาชิก</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">รายการสมาชิก</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">5</span>
+                        </div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Content -->
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <!-- Page Title -->
+                        <div class="page-header">
+                            <h1 class="page-title">รายการสมาชิก</h1>
+                            <div class="page-actions">
+                                <button class="ant-btn ant-btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                    เพิ่มสมาชิก
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Search & Filter Card -->
+                        <div class="content-card filter-card">
+                            <div class="card-body">
+                                <div class="filter-row">
+                                    <div class="filter-group">
+                                        <label class="filter-label">ค้นหา</label>
+                                        <input type="text" class="ant-input" placeholder="Username, ชื่อ, เบอร์โทร" id="searchInput">
+                                    </div>
+                                    <div class="filter-group">
+                                        <label class="filter-label">สถานะ</label>
+                                        <select class="ant-select" id="statusFilter">
+                                            <option value="">ทั้งหมด</option>
+                                            <option value="active">ใช้งาน</option>
+                                            <option value="inactive">ระงับ</option>
+                                            <option value="banned">แบน</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-group">
+                                        <label class="filter-label">วันที่สมัคร</label>
+                                        <input type="date" class="ant-input" id="dateFilter">
+                                    </div>
+                                    <div class="filter-actions">
+                                        <button class="ant-btn ant-btn-primary" id="searchBtn">
+                                            <i class="fas fa-search"></i>
+                                            ค้นหา
+                                        </button>
+                                        <button class="ant-btn" id="resetBtn">
+                                            <i class="fas fa-redo"></i>
+                                            รีเซ็ต
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Members Table -->
+                        <div class="content-card table-card full-width">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <i class="fas fa-users"></i>
+                                    รายการสมาชิก
+                                </h3>
+                                <div class="card-actions">
+                                    <button class="ant-btn ant-btn-sm">
+                                        <i class="fas fa-download"></i>
+                                        Export
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="ant-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ลำดับ</th>
+                                            <th>Username</th>
+                                            <th>ชื่อ-นามสกุล</th>
+                                            <th>เบอร์โทร</th>
+                                            <th>เครดิต</th>
+                                            <th>วันที่สมัคร</th>
+                                            <th>สถานะ</th>
+                                            <th>จัดการ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="membersTableBody">
+                                        <!-- Will be populated by JS -->
+                                    </tbody>
+                                </table>
+                                
+                                <!-- Pagination -->
+                                <div class="table-pagination">
+                                    <div class="pagination-info">
+                                        แสดง <span id="showingFrom">1</span> - <span id="showingTo">10</span> จาก <span id="totalRecords">156</span> รายการ
+                                    </div>
+                                    <div class="pagination-controls">
+                                        <button class="ant-btn pagination-btn" id="prevPage">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <span class="pagination-pages" id="paginationPages">
+                                            <!-- Will be populated by JS -->
+                                        </span>
+                                        <button class="ant-btn pagination-btn" id="nextPage">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../app.js"></script>
+    <script>
+        // Member page specific JS
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMembersTable();
+        });
+        
+        function loadMembersTable() {
+            const members = [
+                { id: 1, username: 'user001', name: 'สมชาย ใจดี', phone: '081-234-5678', credit: 15000, date: '2024-12-05 10:30', status: 'active' },
+                { id: 2, username: 'user002', name: 'สมหญิง รักดี', phone: '082-345-6789', credit: 25000, date: '2024-12-05 09:15', status: 'active' },
+                { id: 3, username: 'user003', name: 'มานะ ขยัน', phone: '083-456-7890', credit: 5000, date: '2024-12-04 18:45', status: 'active' },
+                { id: 4, username: 'user004', name: 'วิชัย สุขใจ', phone: '084-567-8901', credit: 0, date: '2024-12-04 14:20', status: 'inactive' },
+                { id: 5, username: 'user005', name: 'สุดา มีทรัพย์', phone: '085-678-9012', credit: 100000, date: '2024-12-03 22:10', status: 'active' },
+                { id: 6, username: 'user006', name: 'ประยุทธ์ จันทร์', phone: '086-789-0123', credit: 3500, date: '2024-12-03 11:30', status: 'active' },
+                { id: 7, username: 'user007', name: 'สมศักดิ์ ดีใจ', phone: '087-890-1234', credit: 0, date: '2024-12-02 16:45', status: 'banned' },
+                { id: 8, username: 'user008', name: 'นิดา สวยงาม', phone: '088-901-2345', credit: 45000, date: '2024-12-02 08:20', status: 'active' },
+                { id: 9, username: 'user009', name: 'ชาติชาย รวยมาก', phone: '089-012-3456', credit: 250000, date: '2024-12-01 19:55', status: 'active' },
+                { id: 10, username: 'user010', name: 'พิมพ์ใจ ดีมาก', phone: '090-123-4567', credit: 8500, date: '2024-12-01 12:15', status: 'active' }
+            ];
+            
+            const tbody = document.getElementById('membersTableBody');
+            tbody.innerHTML = members.map((member, index) => `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td><span class="text-primary">${member.username}</span></td>
+                    <td>${member.name}</td>
+                    <td>${member.phone}</td>
+                    <td class="text-right">฿ ${member.credit.toLocaleString()}</td>
+                    <td>${member.date}</td>
+                    <td>
+                        <span class="ant-tag ${getStatusClass(member.status)}">
+                            ${getStatusText(member.status)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="ant-btn ant-btn-sm ant-btn-link" title="ดูรายละเอียด">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="ant-btn ant-btn-sm ant-btn-link" title="แก้ไข">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="ant-btn ant-btn-sm ant-btn-link text-success" title="เติมเครดิต">
+                                <i class="fas fa-plus-circle"></i>
+                            </button>
+                            <button class="ant-btn ant-btn-sm ant-btn-link text-danger" title="ตัดเครดิต">
+                                <i class="fas fa-minus-circle"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+            
+            // Update pagination
+            renderPagination(1, 16);
+        }
+        
+        function getStatusClass(status) {
+            switch(status) {
+                case 'active': return 'ant-tag-success';
+                case 'inactive': return 'ant-tag-warning';
+                case 'banned': return 'ant-tag-error';
+                default: return '';
+            }
+        }
+        
+        function getStatusText(status) {
+            switch(status) {
+                case 'active': return 'ใช้งาน';
+                case 'inactive': return 'ระงับ';
+                case 'banned': return 'แบน';
+                default: return status;
+            }
+        }
+        
+        function renderPagination(currentPage, totalPages) {
+            const container = document.getElementById('paginationPages');
+            let html = '';
+            
+            for (let i = 1; i <= Math.min(5, totalPages); i++) {
+                html += `<button class="ant-btn pagination-btn ${i === currentPage ? 'active' : ''}">${i}</button>`;
+            }
+            
+            if (totalPages > 5) {
+                html += '<span class="pagination-ellipsis">...</span>';
+                html += `<button class="ant-btn pagination-btn">${totalPages}</button>`;
+            }
+            
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
+

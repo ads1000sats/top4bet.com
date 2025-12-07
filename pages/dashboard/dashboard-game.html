@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard เกม - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span class="active">Dashboard เกม</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">Dashboard เกม 🎮</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-gamepad"></i></div><div class="stat-info"><h3>1,250</h3><p>เกมทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-users"></i></div><div class="stat-info"><h3>456</h3><p>ผู้เล่นออนไลน์</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 5.2M</h3><p>ยอดเดิมพันวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-chart-line"></i></div><div class="stat-info"><h3>฿ 520K</h3><p>กำไรวันนี้</p></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">เกมยอดนิยม</h3></div>
+                            <div class="card-body">
+                                <div class="game-rank-list">
+                                    <div class="game-rank-item"><span class="rank">1</span><span class="game-name">Sweet Bonanza</span><span class="play-count">1,234 รอบ</span></div>
+                                    <div class="game-rank-item"><span class="rank">2</span><span class="game-name">Gates of Olympus</span><span class="play-count">987 รอบ</span></div>
+                                    <div class="game-rank-item"><span class="rank">3</span><span class="game-name">Starlight Princess</span><span class="play-count">876 รอบ</span></div>
+                                    <div class="game-rank-item"><span class="rank">4</span><span class="game-name">Wild Bandito</span><span class="play-count">654 รอบ</span></div>
+                                    <div class="game-rank-item"><span class="rank">5</span><span class="game-name">Mahjong Ways 2</span><span class="play-count">543 รอบ</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">ค่ายเกมยอดนิยม</h3></div>
+                            <div class="card-body">
+                                <div class="provider-rank-list">
+                                    <div class="provider-rank-item"><span class="rank">1</span><span class="provider-name">PG Soft</span><span class="bet-amount">฿ 2.5M</span></div>
+                                    <div class="provider-rank-item"><span class="rank">2</span><span class="provider-name">Pragmatic Play</span><span class="bet-amount">฿ 1.5M</span></div>
+                                    <div class="provider-rank-item"><span class="rank">3</span><span class="provider-name">JILI</span><span class="bet-amount">฿ 800K</span></div>
+                                    <div class="provider-rank-item"><span class="rank">4</span><span class="provider-name">Joker Gaming</span><span class="bet-amount">฿ 400K</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.row{display:flex;flex-wrap:wrap;margin:-12px}.col-md-6{flex:0 0 50%;max-width:50%;padding:12px}@media(max-width:768px){.col-md-6{flex:0 0 100%;max-width:100%}}.game-rank-list,.provider-rank-list{display:flex;flex-direction:column;gap:12px}.game-rank-item,.provider-rank-item{display:flex;align-items:center;gap:12px;padding:12px;background:#f9f9f9;border-radius:8px}.rank{width:28px;height:28px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:14px}.game-name,.provider-name{flex:1;font-weight:500}.play-count,.bet-amount{color:#888;font-size:14px}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

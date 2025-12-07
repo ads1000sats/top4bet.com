@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หวย Dashboard - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>หวย</span><i class="fas fa-chevron-right"></i><span class="active">Dashboard</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">หวย Dashboard</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-ticket-alt"></i></div><div class="stat-info"><h3>12,450</h3><p>โพยวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 2,850,000</h3><p>ยอดแทงวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-trophy"></i></div><div class="stat-info"><h3>฿ 1,250,000</h3><p>ยอดจ่ายวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-chart-line"></i></div><div class="stat-info"><h3>฿ 1,600,000</h3><p>กำไรวันนี้</p></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">หวยที่กำลังเปิดรับ</h3></div>
+                            <div class="card-body">
+                                <div class="lotto-list">
+                                    <div class="lotto-item"><div class="lotto-flag">🇹🇭</div><div class="lotto-info"><strong>หวยรัฐบาล</strong><small>ปิดรับ: 16 ธ.ค. 14:30</small></div><span class="tag tag-green">เปิด</span></div>
+                                    <div class="lotto-item"><div class="lotto-flag">🇱🇦</div><div class="lotto-info"><strong>หวยลาว</strong><small>ปิดรับ: วันนี้ 20:00</small></div><span class="tag tag-green">เปิด</span></div>
+                                    <div class="lotto-item"><div class="lotto-flag">🇻🇳</div><div class="lotto-info"><strong>หวยฮานอย</strong><small>ปิดรับ: วันนี้ 18:00</small></div><span class="tag tag-green">เปิด</span></div>
+                                    <div class="lotto-item"><div class="lotto-flag">🇲🇾</div><div class="lotto-info"><strong>หวยมาเลย์</strong><small>ปิดรับแล้ว</small></div><span class="tag tag-gray">ปิด</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">ผลหวยล่าสุด</h3></div>
+                            <div class="card-body">
+                                <div class="result-list">
+                                    <div class="result-item"><div class="result-flag">🇹🇭</div><div class="result-info"><strong>หวยรัฐบาล</strong><small>1 ธ.ค. 2024</small></div><div class="result-numbers"><span class="num-3top">123</span><span class="num-2bot">45</span></div></div>
+                                    <div class="result-item"><div class="result-flag">🇱🇦</div><div class="result-info"><strong>หวยลาว</strong><small>5 ธ.ค. 2024</small></div><div class="result-numbers"><span class="num-3top">789</span><span class="num-2bot">01</span></div></div>
+                                    <div class="result-item"><div class="result-flag">🇻🇳</div><div class="result-info"><strong>หวยฮานอย</strong><small>5 ธ.ค. 2024</small></div><div class="result-numbers"><span class="num-3top">456</span><span class="num-2bot">78</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.row{display:flex;flex-wrap:wrap;margin:-12px}.col-md-6{flex:0 0 50%;max-width:50%;padding:12px}@media(max-width:768px){.col-md-6{flex:0 0 100%;max-width:100%}}.lotto-list,.result-list{display:flex;flex-direction:column;gap:12px}.lotto-item,.result-item{display:flex;align-items:center;gap:12px;padding:12px;background:#f9f9f9;border-radius:8px}.lotto-flag,.result-flag{font-size:32px}.lotto-info,.result-info{flex:1}.lotto-info strong,.result-info strong{display:block}.lotto-info small,.result-info small{color:#888;font-size:12px}.result-numbers{display:flex;gap:8px}.num-3top,.num-2bot{padding:4px 12px;border-radius:4px;font-weight:bold}.num-3top{background:#1890ff;color:white}.num-2bot{background:#52c41a;color:white}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

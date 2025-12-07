@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Commission - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>Crypto</span><i class="fas fa-chevron-right"></i><span class="active">Commission</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">Crypto Commission</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>0.025 BTC</h3><p>คอมมิชชั่นเดือนนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-exchange-alt"></i></div><div class="stat-info"><h3>156</h3><p>ธุรกรรมทั้งหมด</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-percentage"></i></div><div class="stat-info"><h3>1.5%</h3><p>อัตราคอมมิชชั่น</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">รายการคอมมิชชั่น Crypto</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>วันที่</th><th>ธุรกรรม</th><th>Coin</th><th>จำนวน</th><th>คอมมิชชั่น</th><th>สถานะ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>05/12/2024</td><td>ฝาก</td><td><i class="fab fa-bitcoin" style="color:#F7931A"></i> BTC</td><td>0.5 BTC</td><td class="text-success">0.0075 BTC</td><td><span class="tag tag-green">จ่ายแล้ว</span></td></tr>
+                                    <tr><td>04/12/2024</td><td>ถอน</td><td><i class="fas fa-dollar-sign" style="color:#26A17B"></i> USDT</td><td>10,000 USDT</td><td class="text-success">150 USDT</td><td><span class="tag tag-green">จ่ายแล้ว</span></td></tr>
+                                    <tr><td>03/12/2024</td><td>ฝาก</td><td><i class="fab fa-ethereum" style="color:#627EEA"></i> ETH</td><td>5 ETH</td><td class="text-success">0.075 ETH</td><td><span class="tag tag-yellow">รอจ่าย</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

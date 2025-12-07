@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - ฝาก/ถอนตรง</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+</head>
+<body>
+    <div id="root">
+        <div class="ant-layout app-layout">
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a>
+                </div>
+                <nav class="sidebar-menu" id="sidebarMenu"></nav>
+            </aside>
+            
+            <div class="ant-layout main-layout">
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">ฝาก/ถอนตรง</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell"><i class="fas fa-bell"></i><span class="badge">5</span></div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <div class="page-header">
+                            <h1 class="page-title">ฝาก/ถอนตรง</h1>
+                            <p class="page-subtitle">เติม/ตัดเครดิตโดยตรง</p>
+                        </div>
+                        
+                        <div class="content-row">
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-plus-circle text-success"></i> เติมเครดิต</h3>
+                                </div>
+                                <div class="card-body" style="padding: 24px;">
+                                    <form class="direct-form">
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" class="ant-input" placeholder="กรอก Username">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">จำนวนเงิน</label>
+                                            <input type="number" class="ant-input" placeholder="0.00">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">หมายเหตุ</label>
+                                            <textarea class="ant-input" rows="3" placeholder="กรอกหมายเหตุ"></textarea>
+                                        </div>
+                                        <button type="submit" class="ant-btn ant-btn-success" style="width: 100%;">
+                                            <i class="fas fa-plus"></i> เติมเครดิต
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h3 class="card-title"><i class="fas fa-minus-circle text-danger"></i> ตัดเครดิต</h3>
+                                </div>
+                                <div class="card-body" style="padding: 24px;">
+                                    <form class="direct-form">
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" class="ant-input" placeholder="กรอก Username">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">จำนวนเงิน</label>
+                                            <input type="number" class="ant-input" placeholder="0.00">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 16px;">
+                                            <label class="form-label">หมายเหตุ</label>
+                                            <textarea class="ant-input" rows="3" placeholder="กรอกหมายเหตุ"></textarea>
+                                        </div>
+                                        <button type="submit" class="ant-btn ant-btn-danger" style="width: 100%;">
+                                            <i class="fas fa-minus"></i> ตัดเครดิต
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="../../app.js"></script>
+    <style>
+        .form-label { display: block; font-weight: 500; margin-bottom: 8px; color: var(--text-secondary); }
+        textarea.ant-input { height: auto; resize: vertical; }
+    </style>
+</body>
+</html>
+

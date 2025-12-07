@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - ตั้งค่าระบบ</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+</head>
+<body>
+    <div id="root">
+        <div class="ant-layout app-layout">
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a>
+                </div>
+                <nav class="sidebar-menu" id="sidebarMenu"></nav>
+            </aside>
+            
+            <div class="ant-layout main-layout">
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">ระบบ</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">ตั้งค่าระบบ</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell"><i class="fas fa-bell"></i><span class="badge">5</span></div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <div class="page-header">
+                            <h1 class="page-title">ตั้งค่าระบบ</h1>
+                        </div>
+                        
+                        <div class="settings-grid">
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-globe"></i>
+                                <h3>ตั้งค่าเว็บไซต์</h3>
+                                <p>ชื่อเว็บ, โลโก้, โดเมน</p>
+                            </a>
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-university"></i>
+                                <h3>ตั้งค่าธนาคาร</h3>
+                                <p>บัญชีรับฝาก, ถอน</p>
+                            </a>
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-gift"></i>
+                                <h3>ตั้งค่าโปรโมชั่น</h3>
+                                <p>โบนัส, คืนยอดเสีย</p>
+                            </a>
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-bell"></i>
+                                <h3>ตั้งค่าแจ้งเตือน</h3>
+                                <p>Line, SMS, Email</p>
+                            </a>
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>ตั้งค่าความปลอดภัย</h3>
+                                <p>2FA, IP Whitelist</p>
+                            </a>
+                            <a href="#" class="setting-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>ตั้งค่าเวลา</h3>
+                                <p>เวลาเปิด/ปิดระบบ</p>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="../../app.js"></script>
+    <style>
+        .settings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .setting-card { background: var(--white); border-radius: var(--radius-lg); padding: 24px; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); transition: all var(--transition-normal); }
+        .setting-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--primary-color); }
+        .setting-card i { font-size: 32px; color: var(--primary-color); margin-bottom: 16px; }
+        .setting-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 8px; }
+        .setting-card p { color: var(--text-tertiary); margin: 0; font-size: 14px; }
+    </style>
+</body>
+</html>
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="assets/banks.css">
+</head>
+<body>
+    <div id="root">
+        <!-- Main Layout -->
+        <div class="ant-layout app-layout">
+            <!-- Sidebar -->
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                    </a>
+                </div>
+                
+                <nav class="sidebar-menu" id="sidebarMenu">
+                    <!-- Menu items will be loaded by JS -->
+                </nav>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <div class="ant-layout main-layout">
+                <!-- Header -->
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">5</span>
+                        </div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Content -->
+                <main class="ant-layout-content app-content" id="pageContent">
+                    <div class="page-container">
+                        <!-- Page Title -->
+                        <div class="page-header">
+                            <h1 class="page-title">Dashboard</h1>
+                            <p class="page-subtitle">ภาพรวมระบบ</p>
+                        </div>
+                        
+                        <!-- Stats Cards -->
+                        <div class="stats-row">
+                            <div class="stat-card stat-blue">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="totalMembers">12,458</span>
+                                    <span class="stat-label">สมาชิกทั้งหมด</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-green">
+                                <div class="stat-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="newMembers">156</span>
+                                    <span class="stat-label">สมาชิกใหม่วันนี้</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-orange">
+                                <div class="stat-icon">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="totalDeposit">฿ 2,458,900</span>
+                                    <span class="stat-label">ยอดฝากวันนี้</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-red">
+                                <div class="stat-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="totalWithdraw">฿ 1,234,500</span>
+                                    <span class="stat-label">ยอดถอนวันนี้</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Stats Row -->
+                        <div class="stats-row">
+                            <div class="stat-card stat-purple">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingDeposit">23</span>
+                                    <span class="stat-label">รอฝาก</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-cyan">
+                                <div class="stat-icon">
+                                    <i class="fas fa-hourglass-half"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="pendingWithdraw">18</span>
+                                    <span class="stat-label">รอถอน</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-gold">
+                                <div class="stat-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="totalCredit">฿ 5,678,900</span>
+                                    <span class="stat-label">เครดิตคงเหลือ</span>
+                                </div>
+                            </div>
+                            <div class="stat-card stat-teal">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="profitToday">฿ 1,224,400</span>
+                                    <span class="stat-label">กำไรวันนี้</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tables Section -->
+                        <div class="content-row">
+                            <!-- Recent Transactions -->
+                            <div class="content-card table-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        รายการฝาก/ถอนล่าสุด
+                                    </h3>
+                                    <a href="pages/deposit-withdraw/deposit-withdraw-pending.html" class="card-link">ดูทั้งหมด <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="ant-table">
+                                        <thead>
+                                            <tr>
+                                                <th>เวลา</th>
+                                                <th>Username</th>
+                                                <th>ประเภท</th>
+                                                <th>จำนวน</th>
+                                                <th>สถานะ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="recentTransactions">
+                                            <!-- Will be populated by JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- New Members -->
+                            <div class="content-card table-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-user-plus"></i>
+                                        สมาชิกใหม่ล่าสุด
+                                    </h3>
+                                    <a href="pages/member/member.html" class="card-link">ดูทั้งหมด <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="ant-table">
+                                        <thead>
+                                            <tr>
+                                                <th>เวลา</th>
+                                                <th>Username</th>
+                                                <th>ชื่อ</th>
+                                                <th>เบอร์โทร</th>
+                                                <th>สถานะ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="newMembersList">
+                                            <!-- Will be populated by JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="spa.js"></script>
+</body>
+</html>
+

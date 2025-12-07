@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตั้งค่าเทิร์นโอเวอร์ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ตั้งค่า</span><i class="fas fa-chevron-right"></i><span class="active">เทิร์นโอเวอร์</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ตั้งค่าเทิร์นโอเวอร์</h1></div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">เงื่อนไขเทิร์นโอเวอร์</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>ประเภท</th><th>เทิร์นโอเวอร์ (เท่า)</th><th>นับหวย</th><th>นับคาสิโน</th><th>นับสล็อต</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>ฝากปกติ</td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-save"></i></button></td></tr>
+                                    <tr><td>โบนัสต้อนรับ</td><td><input type="number" class="form-control form-control-sm" value="5" style="width:80px"></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-save"></i></button></td></tr>
+                                    <tr><td>โบนัสฝากครั้งแรก</td><td><input type="number" class="form-control form-control-sm" value="3" style="width:80px"></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-save"></i></button></td></tr>
+                                    <tr><td>โบนัสวันเกิด</td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-save"></i></button></td></tr>
+                                    <tr><td>โบนัสแนะนำเพื่อน</td><td><input type="number" class="form-control form-control-sm" value="1" style="width:80px"></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-save"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

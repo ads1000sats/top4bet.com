@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รางวัลชิงโชค - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ชิงโชค</span><i class="fas fa-chevron-right"></i><span class="active">รางวัล</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">รางวัลชิงโชค 🎁</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่มรางวัล</button></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="prize-grid">
+                            <div class="prize-card"><div class="prize-icon">🎉</div><div class="prize-info"><h4>เครดิตฟรี 100 บาท</h4><p>โอกาส: 50%</p><span class="tag tag-green">เปิด</span></div></div>
+                            <div class="prize-card"><div class="prize-icon">💰</div><div class="prize-info"><h4>เครดิตฟรี 500 บาท</h4><p>โอกาส: 25%</p><span class="tag tag-green">เปิด</span></div></div>
+                            <div class="prize-card"><div class="prize-icon">🏆</div><div class="prize-info"><h4>เครดิตฟรี 1,000 บาท</h4><p>โอกาส: 15%</p><span class="tag tag-green">เปิด</span></div></div>
+                            <div class="prize-card"><div class="prize-icon">👑</div><div class="prize-info"><h4>iPhone 15 Pro Max</h4><p>โอกาส: 0.1%</p><span class="tag tag-green">เปิด</span></div></div>
+                            <div class="prize-card"><div class="prize-icon">🎰</div><div class="prize-info"><h4>หมุนฟรีสล็อต 10 รอบ</h4><p>โอกาส: 5%</p><span class="tag tag-green">เปิด</span></div></div>
+                            <div class="prize-card"><div class="prize-icon">😢</div><div class="prize-info"><h4>เสียใจด้วย ลองใหม่</h4><p>โอกาส: 4.9%</p><span class="tag tag-gray">ปิด</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.prize-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}@media(max-width:992px){.prize-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:576px){.prize-grid{grid-template-columns:1fr}}.prize-card{background:linear-gradient(135deg,#fff,#f0f0f0);border:1px solid #e8e8e8;border-radius:12px;padding:24px;text-align:center;transition:all 0.3s}.prize-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}.prize-icon{font-size:48px;margin-bottom:12px}.prize-info h4{margin-bottom:8px}.prize-info p{color:#888;margin-bottom:12px}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

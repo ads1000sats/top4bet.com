@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือการใช้งาน - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span class="active">คู่มือการใช้งาน</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">คู่มือการใช้งาน</h1></div>
+                <div class="manual-grid">
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Dashboard</h3><p>ภาพรวมระบบ สถิติ และข้อมูลสำคัญ</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-users"></i></div><h3>จัดการสมาชิก</h3><p>เพิ่ม แก้ไข ลบ และจัดการสมาชิก</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-exchange-alt"></i></div><h3>ฝาก/ถอน</h3><p>จัดการรายการฝากถอนเงิน</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-ticket-alt"></i></div><h3>จัดการหวย</h3><p>ตั้งค่าหวย อัตราจ่าย และผลรางวัล</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-chart-bar"></i></div><h3>รายงาน</h3><p>ดูรายงานและสถิติต่างๆ</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                    <div class="manual-card"><div class="manual-icon"><i class="fas fa-cogs"></i></div><h3>ตั้งค่าระบบ</h3><p>ตั้งค่าระบบและการทำงานต่างๆ</p><a href="#" class="btn btn-outline">อ่านเพิ่มเติม</a></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.manual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}@media(max-width:992px){.manual-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:576px){.manual-grid{grid-template-columns:1fr}}.manual-card{background:white;border-radius:12px;padding:32px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:all 0.3s}.manual-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.15)}.manual-icon{width:80px;height:80px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px;color:white}.manual-card h3{margin-bottom:12px}.manual-card p{color:#666;margin-bottom:20px}.btn-outline{border:1px solid var(--primary-color);color:var(--primary-color);background:transparent}.btn-outline:hover{background:var(--primary-color);color:white}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

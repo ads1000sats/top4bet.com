@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มินิเกม - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                </a>
+            </div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span>เกม</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="active">มินิเกม</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="header-item user-dropdown" id="userDropdown">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userName">admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="user-dropdown-menu" id="userDropdownMenu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user"></i> โปรไฟล์</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-key"></i> เปลี่ยนรหัสผ่าน</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../login.html" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">จัดการมินิเกม</h1>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="stats-grid mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>3</h3>
+                            <p>เกมที่เปิดให้บริการ</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>ผู้เล่นวันนี้</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>฿ 89,500</h3>
+                            <p>ยอดเดิมพันวันนี้</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>฿ 12,450</h3>
+                            <p>กำไรวันนี้</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Games List -->
+                <div class="row">
+                    <!-- Hi-Lo -->
+                    <div class="col-md-4 mb-4">
+                        <div class="game-card">
+                            <div class="game-image hilo">
+                                <i class="fas fa-sort"></i>
+                                <span class="game-status active">เปิดให้บริการ</span>
+                            </div>
+                            <div class="game-content">
+                                <h4>ไฮโล (Hi-Lo)</h4>
+                                <p class="game-desc">เกมทายผลลูกเต๋า สูง-ต่ำ</p>
+                                <div class="game-stats">
+                                    <div class="game-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>456 ผู้เล่น</span>
+                                    </div>
+                                    <div class="game-stat">
+                                        <i class="fas fa-coins"></i>
+                                        <span>฿ 35,200</span>
+                                    </div>
+                                </div>
+                                <div class="game-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-chart-bar"></i> สถิติ</button>
+                                    <button class="btn btn-sm btn-warning"><i class="fas fa-cog"></i> ตั้งค่า</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-power-off"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hua Koi -->
+                    <div class="col-md-4 mb-4">
+                        <div class="game-card">
+                            <div class="game-image huakoi">
+                                <i class="fas fa-coins"></i>
+                                <span class="game-status active">เปิดให้บริการ</span>
+                            </div>
+                            <div class="game-content">
+                                <h4>หัวก้อย (Hua Koi)</h4>
+                                <p class="game-desc">เกมทายหัว-ก้อย</p>
+                                <div class="game-stats">
+                                    <div class="game-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>389 ผู้เล่น</span>
+                                    </div>
+                                    <div class="game-stat">
+                                        <i class="fas fa-coins"></i>
+                                        <span>฿ 28,100</span>
+                                    </div>
+                                </div>
+                                <div class="game-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-chart-bar"></i> สถิติ</button>
+                                    <button class="btn btn-sm btn-warning"><i class="fas fa-cog"></i> ตั้งค่า</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-power-off"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pao Ying Chub -->
+                    <div class="col-md-4 mb-4">
+                        <div class="game-card">
+                            <div class="game-image paoyingchub">
+                                <i class="fas fa-hand-rock"></i>
+                                <span class="game-status active">เปิดให้บริการ</span>
+                            </div>
+                            <div class="game-content">
+                                <h4>เป่ายิ้งฉุบ</h4>
+                                <p class="game-desc">เกมเป่ายิ้งฉุบ ค้อน-กรรไกร-กระดาษ</p>
+                                <div class="game-stats">
+                                    <div class="game-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>389 ผู้เล่น</span>
+                                    </div>
+                                    <div class="game-stat">
+                                        <i class="fas fa-coins"></i>
+                                        <span>฿ 26,200</span>
+                                    </div>
+                                </div>
+                                <div class="game-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-chart-bar"></i> สถิติ</button>
+                                    <button class="btn btn-sm btn-warning"><i class="fas fa-cog"></i> ตั้งค่า</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-power-off"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Plays -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">การเล่นล่าสุด</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="60">#</th>
+                                        <th>เวลา</th>
+                                        <th>เกม</th>
+                                        <th>ผู้เล่น</th>
+                                        <th>เดิมพัน</th>
+                                        <th>ผลลัพธ์</th>
+                                        <th>ชนะ/แพ้</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>14:35:22</td>
+                                        <td><span class="tag tag-blue">ไฮโล</span></td>
+                                        <td>member***123</td>
+                                        <td>฿ 500</td>
+                                        <td>สูง (11)</td>
+                                        <td class="text-success">+฿ 450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>14:34:15</td>
+                                        <td><span class="tag tag-green">หัวก้อย</span></td>
+                                        <td>member***456</td>
+                                        <td>฿ 1,000</td>
+                                        <td>หัว</td>
+                                        <td class="text-danger">-฿ 1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>14:33:45</td>
+                                        <td><span class="tag tag-purple">เป่ายิ้งฉุบ</span></td>
+                                        <td>member***789</td>
+                                        <td>฿ 200</td>
+                                        <td>ค้อน ชนะ กรรไกร</td>
+                                        <td class="text-success">+฿ 180</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>14:32:30</td>
+                                        <td><span class="tag tag-blue">ไฮโล</span></td>
+                                        <td>member***321</td>
+                                        <td>฿ 2,000</td>
+                                        <td>ต่ำ (8)</td>
+                                        <td class="text-success">+฿ 1,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>14:31:18</td>
+                                        <td><span class="tag tag-green">หัวก้อย</span></td>
+                                        <td>member***654</td>
+                                        <td>฿ 500</td>
+                                        <td>ก้อย</td>
+                                        <td class="text-success">+฿ 450</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -12px;
+        }
+        .col-md-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+            padding: 12px;
+        }
+        @media (max-width: 992px) {
+            .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        @media (max-width: 576px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .game-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .game-image {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: white;
+            position: relative;
+        }
+        .game-image.hilo {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .game-image.huakoi {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+        .game-image.paoyingchub {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+        .game-status {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .game-status.active {
+            background: rgba(82, 196, 26, 0.9);
+            color: white;
+        }
+        .game-status.inactive {
+            background: rgba(255, 77, 79, 0.9);
+            color: white;
+        }
+        .game-content {
+            padding: 16px;
+        }
+        .game-content h4 {
+            margin: 0 0 4px 0;
+            font-size: 18px;
+        }
+        .game-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .game-stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .game-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #666;
+        }
+        .game-stat i {
+            color: var(--primary-color);
+        }
+        .game-actions {
+            display: flex;
+            gap: 8px;
+        }
+    </style>
+
+    <script src="../../app.js"></script>
+</body>
+</html>
+

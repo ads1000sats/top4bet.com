@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อความเข้า - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                </a>
+            </div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span>ข้อความ</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="active">ข้อความเข้า</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="header-item user-dropdown" id="userDropdown">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userName">admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="user-dropdown-menu" id="userDropdownMenu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user"></i> โปรไฟล์</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-key"></i> เปลี่ยนรหัสผ่าน</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../login.html" class="dropdown-item text-danger" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title">ข้อความเข้า</h1>
+                    <div class="page-actions">
+                        <button class="btn btn-success">
+                            <i class="fas fa-check-double"></i> อ่านทั้งหมด
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="stats-grid mb-4">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>156</h3>
+                            <p>ข้อความทั้งหมด</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>23</h3>
+                            <p>ยังไม่อ่าน</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>133</h3>
+                            <p>อ่านแล้ว</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages List -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">รายการข้อความ</h3>
+                        <div class="card-actions">
+                            <select class="form-control form-control-sm" style="width: 150px;">
+                                <option value="">ทั้งหมด</option>
+                                <option value="unread">ยังไม่อ่าน</option>
+                                <option value="read">อ่านแล้ว</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="message-list">
+                            <!-- Unread Message -->
+                            <div class="message-item unread">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>member001</strong>
+                                        <span class="message-time">5 นาทีที่แล้ว</span>
+                                    </div>
+                                    <div class="message-subject">สอบถามเรื่องการถอนเงิน</div>
+                                    <div class="message-preview">สวัสดีครับ ผมต้องการสอบถามเรื่องการถอนเงินครับ ทำไมยังไม่ได้รับเงิน...</div>
+                                </div>
+                                <div class="message-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-reply"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Unread Message -->
+                            <div class="message-item unread">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>member002</strong>
+                                        <span class="message-time">15 นาทีที่แล้ว</span>
+                                    </div>
+                                    <div class="message-subject">แจ้งปัญหาการเข้าสู่ระบบ</div>
+                                    <div class="message-preview">ไม่สามารถเข้าสู่ระบบได้ครับ ขึ้นว่ารหัสผ่านไม่ถูกต้อง...</div>
+                                </div>
+                                <div class="message-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-reply"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Read Message -->
+                            <div class="message-item">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>member003</strong>
+                                        <span class="message-time">1 ชั่วโมงที่แล้ว</span>
+                                    </div>
+                                    <div class="message-subject">ขอบคุณสำหรับโบนัส</div>
+                                    <div class="message-preview">ขอบคุณมากครับสำหรับโบนัสที่ได้รับ บริการดีมาก...</div>
+                                </div>
+                                <div class="message-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-reply"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Read Message -->
+                            <div class="message-item">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>member004</strong>
+                                        <span class="message-time">2 ชั่วโมงที่แล้ว</span>
+                                    </div>
+                                    <div class="message-subject">สอบถามโปรโมชั่น</div>
+                                    <div class="message-preview">อยากทราบว่ามีโปรโมชั่นอะไรบ้างครับ...</div>
+                                </div>
+                                <div class="message-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-reply"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Read Message -->
+                            <div class="message-item">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <strong>member005</strong>
+                                        <span class="message-time">3 ชั่วโมงที่แล้ว</span>
+                                    </div>
+                                    <div class="message-subject">แจ้งปัญหาการฝากเงิน</div>
+                                    <div class="message-preview">ฝากเงินไปแล้วแต่ยอดยังไม่เข้าครับ...</div>
+                                </div>
+                                <div class="message-actions">
+                                    <button class="btn btn-sm btn-info"><i class="fas fa-reply"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination-wrapper p-3">
+                            <div class="pagination-info">
+                                แสดง 1-5 จาก 156 รายการ
+                            </div>
+                            <div class="pagination">
+                                <button class="btn btn-sm" disabled><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn btn-sm btn-primary">1</button>
+                                <button class="btn btn-sm">2</button>
+                                <button class="btn btn-sm">3</button>
+                                <button class="btn btn-sm">...</button>
+                                <button class="btn btn-sm">32</button>
+                                <button class="btn btn-sm"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .message-list {
+            border-top: 1px solid var(--border-color);
+        }
+        .message-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .message-item:hover {
+            background: rgba(0,0,0,0.02);
+        }
+        .message-item.unread {
+            background: rgba(24, 144, 255, 0.05);
+            border-left: 3px solid var(--primary-color);
+        }
+        .message-item.unread .message-subject {
+            font-weight: 600;
+        }
+        .message-avatar {
+            font-size: 40px;
+            color: #ccc;
+            margin-right: 16px;
+        }
+        .message-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .message-time {
+            font-size: 12px;
+            color: #999;
+        }
+        .message-subject {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: var(--text-color);
+        }
+        .message-preview {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .message-actions {
+            display: flex;
+            gap: 8px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .message-item:hover .message-actions {
+            opacity: 1;
+        }
+        .p-0 { padding: 0 !important; }
+        .p-3 { padding: 16px !important; }
+    </style>
+
+    <script src="../../app.js"></script>
+</body>
+</html>
+

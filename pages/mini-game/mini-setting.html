@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตั้งค่ามินิเกม - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>มินิเกม</span><i class="fas fa-chevron-right"></i><span class="active">ตั้งค่า</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ตั้งค่ามินิเกม</h1></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="game-toggle-grid">
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">🎲</span><strong>ไฮโล</strong><small>1,245 รอบ/วัน</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">🪙</span><strong>หัวก้อย</strong><small>2,450 รอบ/วัน</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">✊</span><strong>เป่ายิ้งฉุบ</strong><small>1,890 รอบ/วัน</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">🎰</span><strong>สล็อตมินิ</strong><small>890 รอบ/วัน</small></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">🃏</span><strong>ป๊อกเด้ง</strong><small>560 รอบ/วัน</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                            <div class="game-toggle-item"><div class="game-info"><span class="game-icon">🎯</span><strong>ลูกดอก</strong><small>320 รอบ/วัน</small></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.game-toggle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:768px){.game-toggle-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.game-toggle-grid{grid-template-columns:1fr}}.game-toggle-item{display:flex;align-items:center;justify-content:space-between;padding:20px;background:#f9f9f9;border-radius:12px}.game-info{display:flex;align-items:center;gap:12px}.game-icon{font-size:32px}.game-info strong{display:block}.game-info small{color:#888;font-size:12px}.switch{position:relative;display:inline-block;width:50px;height:28px}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;transition:.4s;border-radius:28px}.slider:before{position:absolute;content:"";height:20px;width:20px;left:4px;bottom:4px;background-color:white;transition:.4s;border-radius:50%}input:checked+.slider{background-color:#52c41a}input:checked+.slider:before{transform:translateX(22px)}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

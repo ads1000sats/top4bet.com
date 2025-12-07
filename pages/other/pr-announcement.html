@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประกาศ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ประชาสัมพันธ์</span><i class="fas fa-chevron-right"></i><span class="active">ประกาศ</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">จัดการประกาศ</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่มประกาศ</button></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>#</th><th>หัวข้อ</th><th>ประเภท</th><th>วันที่</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td><strong>แจ้งปิดปรับปรุงระบบ</strong><br><small class="text-muted">ระบบจะปิดปรับปรุงชั่วคราว...</small></td><td><span class="tag tag-red">สำคัญ</span></td><td>05/12/2024</td><td><span class="tag tag-green">แสดง</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                    <tr><td>2</td><td><strong>โปรโมชั่นส่งท้ายปี</strong><br><small class="text-muted">รับโบนัส 100% สูงสุด 5,000 บาท...</small></td><td><span class="tag tag-blue">โปรโมชั่น</span></td><td>01/12/2024</td><td><span class="tag tag-green">แสดง</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                    <tr><td>3</td><td><strong>อัพเดทอัตราจ่ายใหม่</strong><br><small class="text-muted">ปรับอัตราจ่ายหวยทุกประเภท...</small></td><td><span class="tag tag-yellow">ข่าวสาร</span></td><td>28/11/2024</td><td><span class="tag tag-gray">ซ่อน</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

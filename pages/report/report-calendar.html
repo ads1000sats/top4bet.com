@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - รายงานปฏิทิน</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+</head>
+<body>
+    <div id="root">
+        <div class="ant-layout app-layout">
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a>
+                </div>
+                <nav class="sidebar-menu" id="sidebarMenu"></nav>
+            </aside>
+            
+            <div class="ant-layout main-layout">
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">รายงาน</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">รายงานปฏิทิน</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell"><i class="fas fa-bell"></i><span class="badge">5</span></div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <div class="page-header">
+                            <h1 class="page-title">รายงานปฏิทิน</h1>
+                            <p class="page-subtitle">ธันวาคม 2567</p>
+                        </div>
+                        
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title"><i class="fas fa-calendar-alt"></i> สรุปรายเดือน</h3>
+                                <div class="card-actions">
+                                    <button class="ant-btn"><i class="fas fa-chevron-left"></i></button>
+                                    <span style="margin: 0 12px; font-weight: 500;">ธันวาคม 2567</span>
+                                    <button class="ant-btn"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="calendar-grid">
+                                    <div class="calendar-header">
+                                        <div>อา</div><div>จ</div><div>อ</div><div>พ</div><div>พฤ</div><div>ศ</div><div>ส</div>
+                                    </div>
+                                    <div class="calendar-body" id="calendarBody"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="../../app.js"></script>
+    <script>
+        const calendarData = {
+            1: { deposit: 245000, withdraw: 123000 },
+            2: { deposit: 312000, withdraw: 198000 },
+            3: { deposit: 189000, withdraw: 145000 },
+            4: { deposit: 456000, withdraw: 234000 },
+            5: { deposit: 567000, withdraw: 345000 }
+        };
+        
+        const body = document.getElementById('calendarBody');
+        let html = '';
+        for (let i = 1; i <= 31; i++) {
+            const data = calendarData[i];
+            const profit = data ? data.deposit - data.withdraw : 0;
+            html += `
+                <div class="calendar-day ${i === 5 ? 'today' : ''} ${data ? 'has-data' : ''}">
+                    <span class="day-number">${i}</span>
+                    ${data ? `
+                        <div class="day-stats">
+                            <span class="text-success">+${(data.deposit/1000).toFixed(0)}k</span>
+                            <span class="text-danger">-${(data.withdraw/1000).toFixed(0)}k</span>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+        body.innerHTML = html;
+    </script>
+    <style>
+        .calendar-grid { border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; }
+        .calendar-header { display: grid; grid-template-columns: repeat(7, 1fr); background: var(--background-light); }
+        .calendar-header > div { padding: 12px; text-align: center; font-weight: 600; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); }
+        .calendar-body { display: grid; grid-template-columns: repeat(7, 1fr); }
+        .calendar-day { min-height: 80px; padding: 8px; border: 1px solid var(--border-light); border-top: none; border-left: none; }
+        .calendar-day:nth-child(7n) { border-right: none; }
+        .calendar-day.today { background: var(--primary-bg); }
+        .calendar-day.has-data { background: rgba(82, 196, 26, 0.05); }
+        .day-number { font-weight: 600; display: block; margin-bottom: 4px; }
+        .day-stats { font-size: 11px; display: flex; flex-direction: column; gap: 2px; }
+    </style>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขอเครดิต - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span class="active">ขอเครดิต</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">รายการขอเครดิต</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-clock"></i></div><div class="stat-info"><h3>8</h3><p>รอดำเนินการ</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-check-circle"></i></div><div class="stat-info"><h3>45</h3><p>อนุมัติแล้ว</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-times-circle"></i></div><div class="stat-info"><h3>3</h3><p>ปฏิเสธ</p></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>#</th><th>วันที่</th><th>ผู้ขอ</th><th>จำนวน</th><th>หมายเหตุ</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td>05/12/2024 14:30</td><td><strong>agent001</strong></td><td>฿ 100,000</td><td>ขอเครดิตเพิ่มเติม</td><td><span class="tag tag-yellow">รอดำเนินการ</span></td><td><button class="btn btn-sm btn-success"><i class="fas fa-check"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button></td></tr>
+                                    <tr><td>2</td><td>05/12/2024 10:15</td><td><strong>agent002</strong></td><td>฿ 50,000</td><td>เครดิตไม่พอ</td><td><span class="tag tag-yellow">รอดำเนินการ</span></td><td><button class="btn btn-sm btn-success"><i class="fas fa-check"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button></td></tr>
+                                    <tr><td>3</td><td>04/12/2024 16:45</td><td><strong>agent003</strong></td><td>฿ 200,000</td><td>ขอเครดิตประจำเดือน</td><td><span class="tag tag-green">อนุมัติแล้ว</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

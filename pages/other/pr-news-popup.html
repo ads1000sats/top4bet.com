@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup ข่าวสาร - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ประชาสัมพันธ์</span><i class="fas fa-chevron-right"></i><span class="active">Popup ข่าวสาร</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">จัดการ Popup ข่าวสาร</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่ม Popup</button></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>#</th><th>รูปภาพ</th><th>หัวข้อ</th><th>ลิงก์</th><th>วันที่แสดง</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td><div class="popup-thumb"><i class="fas fa-image"></i></div></td><td>โปรโมชั่นปีใหม่</td><td><a href="#">/promotion/newyear</a></td><td>01/12 - 31/12/2024</td><td><span class="tag tag-green">แสดง</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                    <tr><td>2</td><td><div class="popup-thumb"><i class="fas fa-image"></i></div></td><td>แนะนำเพื่อนรับ 100</td><td><a href="#">/promotion/referral</a></td><td>01/11 - 30/11/2024</td><td><span class="tag tag-gray">หมดอายุ</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button> <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.popup-thumb{width:60px;height:40px;background:#f0f0f0;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#999}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

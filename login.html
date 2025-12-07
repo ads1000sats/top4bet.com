@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - Login</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body class="login-page">
+    <div id="root">
+        <div class="login-container">
+            <!-- Login Card -->
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <img src="assets/images/logo.webp" alt="HUAY" class="login-logo-img">
+                        <p class="logo-subtitle">ยินดีต้อนรับสู่ TOP4.COM แหล่งรวมหีสาวสวย
+                        อันดับหนึ่ง</p>
+                    </div>
+                </div>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-header-row">
+                        <label class="form-label-title">ชื่อผู้ใช้งาน</label>
+                        <a href="#" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            ติดต่อเรา
+                        </a>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-wrapper input-with-icon">
+                            <i class="fas fa-user input-icon"></i>
+                            <input 
+                                type="text" 
+                                class="ant-input form-input" 
+                                id="username" 
+                                placeholder="ชื่อบัญชีผู้ใช้งาน"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label-title">รหัสผ่าน</label>
+                        <div class="input-wrapper input-with-icon password-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input 
+                                type="password" 
+                                class="ant-input form-input" 
+                                id="password" 
+                                placeholder="รหัสผ่าน"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="login-buttons">
+                        <button type="button" class="ant-btn login-btn-register" id="registerBtn">
+                            <i class="fas fa-user-plus"></i>
+                            <span>สมัครสมาชิก</span>
+                        </button>
+                        <button type="submit" class="ant-btn ant-btn-primary login-btn-submit" id="loginBtn">
+                            <i class="fas fa-lock"></i>
+                            <span class="btn-text">เข้าสู่ระบบ</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </div>
+                    
+                    <div class="login-footer-link">
+                        <a href="#" class="forgot-link">ลืมรหัสผ่าน</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Error Modal -->
+    <div class="modal-overlay" id="errorModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon error">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <h3 class="modal-title" id="errorTitle">เกิดข้อผิดพลาด</h3>
+            <p class="modal-message" id="errorMessage">กรุณาลองใหม่อีกครั้ง</p>
+            <button class="ant-btn ant-btn-primary modal-btn" id="closeErrorModal">ตกลง</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script>
+        // Login specific JS
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const passwordToggle = document.getElementById('passwordToggle');
+            const passwordInput = document.getElementById('password');
+            
+            // Toggle password visibility
+            passwordToggle.addEventListener('click', function() {
+                const type = passwordInput.type === 'password' ? 'text' : 'password';
+                passwordInput.type = type;
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+            
+            // Handle login form
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const loginBtn = document.getElementById('loginBtn');
+                const btnText = loginBtn.querySelector('.btn-text');
+                const btnLoading = loginBtn.querySelector('.btn-loading');
+                
+                // Show loading
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-block';
+                loginBtn.disabled = true;
+                
+                // Simulate login (replace with actual API call)
+                setTimeout(function() {
+                    // Demo: Check credentials
+                    if (username === 'admin' && password === 'admin') {
+                        // Store login state
+                        localStorage.setItem('isLoggedIn', 'true');
+                        localStorage.setItem('username', username);
+                        localStorage.setItem('userRole', 'ADMIN');
+                        
+                        // Redirect to dashboard
+                        window.location.href = 'index.html';
+                    } else {
+                        // Show error
+                        showError('เข้าสู่ระบบไม่สำเร็จ', 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง');
+                        
+                        // Reset button
+                        btnText.style.display = 'inline-block';
+                        btnLoading.style.display = 'none';
+                        loginBtn.disabled = false;
+                    }
+                }, 1500);
+            });
+            
+            // Error modal
+            function showError(title, message) {
+                document.getElementById('errorTitle').textContent = title;
+                document.getElementById('errorMessage').textContent = message;
+                document.getElementById('errorModal').style.display = 'flex';
+            }
+            
+            document.getElementById('closeErrorModal').addEventListener('click', function() {
+                document.getElementById('errorModal').style.display = 'none';
+            });
+            
+            // Close modal on overlay click
+            document.getElementById('errorModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

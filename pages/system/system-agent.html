@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - จัดการ Agent</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+</head>
+<body>
+    <div id="root">
+        <div class="ant-layout app-layout">
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a>
+                </div>
+                <nav class="sidebar-menu" id="sidebarMenu"></nav>
+            </aside>
+            
+            <div class="ant-layout main-layout">
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">ระบบ</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">จัดการ Agent</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell"><i class="fas fa-bell"></i><span class="badge">5</span></div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <div class="page-header">
+                            <h1 class="page-title">จัดการ Agent</h1>
+                            <button class="ant-btn ant-btn-primary"><i class="fas fa-plus"></i> เพิ่ม Agent</button>
+                        </div>
+                        
+                        <div class="content-card">
+                            <div class="card-body">
+                                <table class="ant-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>ชื่อ</th>
+                                            <th>Master</th>
+                                            <th class="text-right">เครดิต</th>
+                                            <th class="text-right">สมาชิก</th>
+                                            <th>สถานะ</th>
+                                            <th>จัดการ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-primary">agent001</span></td>
+                                            <td>เอเจนต์ หนึ่ง</td>
+                                            <td>master001</td>
+                                            <td class="text-right">฿ 500,000</td>
+                                            <td class="text-right">456</td>
+                                            <td><span class="ant-tag ant-tag-success">ใช้งาน</span></td>
+                                            <td>
+                                                <button class="ant-btn ant-btn-sm ant-btn-link"><i class="fas fa-eye"></i></button>
+                                                <button class="ant-btn ant-btn-sm ant-btn-link"><i class="fas fa-edit"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-primary">agent002</span></td>
+                                            <td>เอเจนต์ สอง</td>
+                                            <td>master001</td>
+                                            <td class="text-right">฿ 350,000</td>
+                                            <td class="text-right">312</td>
+                                            <td><span class="ant-tag ant-tag-success">ใช้งาน</span></td>
+                                            <td>
+                                                <button class="ant-btn ant-btn-sm ant-btn-link"><i class="fas fa-eye"></i></button>
+                                                <button class="ant-btn ant-btn-sm ant-btn-link"><i class="fas fa-edit"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

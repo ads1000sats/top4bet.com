@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่ม Assistant - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ระบบ</span><i class="fas fa-chevron-right"></i><span>Assistant</span><i class="fas fa-chevron-right"></i><span class="active">เพิ่ม Assistant</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">เพิ่ม Assistant ใหม่</h1><a href="system-assistant.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> กลับ</a></div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">ข้อมูล Assistant</h3></div>
+                    <div class="card-body">
+                        <form id="assistantForm">
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label required">ชื่อผู้ใช้</label><input type="text" class="form-control" name="username" required></div>
+                                <div class="form-group"><label class="form-label required">รหัสผ่าน</label><input type="password" class="form-control" name="password" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label required">ชื่อ-นามสกุล</label><input type="text" class="form-control" name="fullname" required></div>
+                                <div class="form-group"><label class="form-label required">เบอร์โทรศัพท์</label><input type="tel" class="form-control" name="phone" required></div>
+                            </div>
+                            <div class="form-section"><h4>สิทธิ์การใช้งาน</h4>
+                                <div class="permission-grid">
+                                    <label class="checkbox-item"><input type="checkbox" checked> ดูรายการสมาชิก</label>
+                                    <label class="checkbox-item"><input type="checkbox" checked> จัดการฝาก/ถอน</label>
+                                    <label class="checkbox-item"><input type="checkbox"> ดูรายงาน</label>
+                                    <label class="checkbox-item"><input type="checkbox"> จัดการหวย</label>
+                                    <label class="checkbox-item"><input type="checkbox"> ตั้งค่าระบบ</label>
+                                    <label class="checkbox-item"><input type="checkbox"> จัดการโปรโมชั่น</label>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="button" class="btn btn-secondary" onclick="history.back()">ยกเลิก</button><button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.permission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.checkbox-item{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f5f5f5;border-radius:6px;cursor:pointer}.checkbox-item:hover{background:#e8e8e8}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

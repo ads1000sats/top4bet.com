@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAY Backoffice - รายการฝากถอนทั้งหมด</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.15/antd.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="../../assets/banks.css">
+</head>
+<body>
+    <div id="root">
+        <div class="ant-layout app-layout">
+            <aside class="ant-layout-sider sidebar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img">
+                    </a>
+                </div>
+                <nav class="sidebar-menu" id="sidebarMenu"></nav>
+            </aside>
+            
+            <div class="ant-layout main-layout">
+                <header class="ant-layout-header app-header">
+                    <div class="header-left">
+                        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                        <div class="breadcrumb">
+                            <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item">ฝาก/ถอน</span>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-item active">ทั้งหมด</span>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-item notification-bell">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">5</span>
+                        </div>
+                        <div class="header-item user-dropdown" id="userDropdown">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <span class="user-name">Admin</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </header>
+                
+                <main class="ant-layout-content app-content">
+                    <div class="page-container">
+                        <div class="page-header">
+                            <h1 class="page-title">รายการฝากถอนทั้งหมด</h1>
+                        </div>
+                        
+                        <!-- Filter -->
+                        <div class="content-card filter-card">
+                            <div class="card-body">
+                                <div class="filter-row">
+                                    <div class="filter-group">
+                                        <label class="filter-label">ค้นหา</label>
+                                        <input type="text" class="ant-input" placeholder="Username">
+                                    </div>
+                                    <div class="filter-group">
+                                        <label class="filter-label">ประเภท</label>
+                                        <select class="ant-select">
+                                            <option value="">ทั้งหมด</option>
+                                            <option value="deposit">ฝาก</option>
+                                            <option value="withdraw">ถอน</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-group">
+                                        <label class="filter-label">สถานะ</label>
+                                        <select class="ant-select">
+                                            <option value="">ทั้งหมด</option>
+                                            <option value="success">สำเร็จ</option>
+                                            <option value="pending">รอดำเนินการ</option>
+                                            <option value="failed">ไม่สำเร็จ</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-group">
+                                        <label class="filter-label">วันที่</label>
+                                        <input type="date" class="ant-input">
+                                    </div>
+                                    <div class="filter-actions">
+                                        <button class="ant-btn ant-btn-primary"><i class="fas fa-search"></i> ค้นหา</button>
+                                        <button class="ant-btn"><i class="fas fa-redo"></i> รีเซ็ต</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Table -->
+                        <div class="content-card table-card full-width">
+                            <div class="card-header">
+                                <h3 class="card-title"><i class="fas fa-list"></i> รายการทั้งหมด</h3>
+                                <button class="ant-btn ant-btn-sm"><i class="fas fa-download"></i> Export</button>
+                            </div>
+                            <div class="card-body">
+                                <table class="ant-table">
+                                    <thead>
+                                        <tr>
+                                            <th>เวลา</th>
+                                            <th>Username</th>
+                                            <th>ประเภท</th>
+                                            <th>จำนวน</th>
+                                            <th>ธนาคาร</th>
+                                            <th>สถานะ</th>
+                                            <th>ผู้ดำเนินการ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="transactionsTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const transactions = [
+                { time: '10:45:23', username: 'user001', type: 'deposit', amount: 5000, bank: 'กสิกร', status: 'success', admin: 'admin01' },
+                { time: '10:42:15', username: 'user015', type: 'withdraw', amount: 10000, bank: 'ไทยพาณิชย์', status: 'success', admin: 'admin01' },
+                { time: '10:38:47', username: 'user023', type: 'deposit', amount: 3000, bank: 'กรุงเทพ', status: 'success', admin: 'admin02' },
+                { time: '10:35:12', username: 'user007', type: 'withdraw', amount: 15000, bank: 'กรุงไทย', status: 'pending', admin: '-' },
+                { time: '10:32:55', username: 'user042', type: 'deposit', amount: 2000, bank: 'ทหารไทยธนชาต', status: 'success', admin: 'admin01' },
+                { time: '10:28:33', username: 'user056', type: 'withdraw', amount: 50000, bank: 'กสิกร', status: 'failed', admin: 'admin02' },
+                { time: '10:25:18', username: 'user089', type: 'deposit', amount: 1000, bank: 'ออมสิน', status: 'success', admin: 'admin01' },
+                { time: '10:22:41', username: 'user034', type: 'withdraw', amount: 8000, bank: 'ไทยพาณิชย์', status: 'success', admin: 'admin02' }
+            ];
+            
+            const tbody = document.getElementById('transactionsTable');
+            tbody.innerHTML = transactions.map(tx => `
+                <tr>
+                    <td>${tx.time}</td>
+                    <td><span class="text-primary">${tx.username}</span></td>
+                    <td><span class="ant-tag ${tx.type === 'deposit' ? 'ant-tag-success' : 'ant-tag-error'}">${tx.type === 'deposit' ? 'ฝาก' : 'ถอน'}</span></td>
+                    <td class="${tx.type === 'deposit' ? 'text-success' : 'text-danger'}">${tx.type === 'deposit' ? '+' : '-'}฿ ${tx.amount.toLocaleString()}</td>
+                    <td><span class="bank-badge bank-${getBankClass(tx.bank)}">${tx.bank}</span></td>
+                    <td><span class="ant-tag ${getStatusClass(tx.status)}">${getStatusText(tx.status)}</span></td>
+                    <td>${tx.admin}</td>
+                </tr>
+            `).join('');
+        });
+        
+        function getBankClass(bank) {
+            const map = {'กสิกร':'kbank','ไทยพาณิชย์':'scb','กรุงเทพ':'bbl','กรุงไทย':'ktb','ทหารไทยธนชาต':'ttb','ออมสิน':'gsb'};
+            return map[bank] || '';
+        }
+        function getStatusClass(s) {
+            return s === 'success' ? 'ant-tag-success' : s === 'pending' ? 'ant-tag-processing' : 'ant-tag-error';
+        }
+        function getStatusText(s) {
+            return s === 'success' ? 'สำเร็จ' : s === 'pending' ? 'รอดำเนินการ' : 'ไม่สำเร็จ';
+        }
+    </script>
+</body>
+</html>
+

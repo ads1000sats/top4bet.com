@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard ระบบ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span class="active">Dashboard ระบบ</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">Dashboard ระบบ</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-server"></i></div><div class="stat-info"><h3>Online</h3><p>Server Status</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-clock"></i></div><div class="stat-info"><h3>99.9%</h3><p>Uptime</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-microchip"></i></div><div class="stat-info"><h3>45%</h3><p>CPU Usage</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-memory"></i></div><div class="stat-info"><h3>62%</h3><p>Memory Usage</p></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">ข้อมูลระบบ</h3></div>
+                            <div class="card-body">
+                                <div class="info-list">
+                                    <div class="info-item"><span>Version</span><span>v2.5.0</span></div>
+                                    <div class="info-item"><span>PHP Version</span><span>8.2.0</span></div>
+                                    <div class="info-item"><span>Laravel Version</span><span>10.0</span></div>
+                                    <div class="info-item"><span>Database</span><span>MySQL 8.0</span></div>
+                                    <div class="info-item"><span>Cache Driver</span><span>Redis</span></div>
+                                    <div class="info-item"><span>Queue Driver</span><span>Redis</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">Storage</h3></div>
+                            <div class="card-body">
+                                <div class="storage-item"><div class="storage-info"><span>Disk Usage</span><span>45.2 GB / 100 GB</span></div><div class="progress-bar"><div class="progress" style="width:45%"></div></div></div>
+                                <div class="storage-item"><div class="storage-info"><span>Database Size</span><span>12.5 GB</span></div><div class="progress-bar"><div class="progress" style="width:25%"></div></div></div>
+                                <div class="storage-item"><div class="storage-info"><span>Logs Size</span><span>2.3 GB</span></div><div class="progress-bar"><div class="progress" style="width:5%"></div></div></div>
+                                <div class="storage-item"><div class="storage-info"><span>Backup Size</span><span>15.8 GB</span></div><div class="progress-bar"><div class="progress" style="width:32%"></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.row{display:flex;flex-wrap:wrap;margin:-12px}.col-md-6{flex:0 0 50%;max-width:50%;padding:12px}@media(max-width:768px){.col-md-6{flex:0 0 100%;max-width:100%}}.info-list{display:flex;flex-direction:column;gap:12px}.info-item{display:flex;justify-content:space-between;padding:12px;background:#f9f9f9;border-radius:6px}.storage-item{margin-bottom:16px}.storage-info{display:flex;justify-content:space-between;margin-bottom:8px;font-size:14px}.progress-bar{height:8px;background:#e8e8e8;border-radius:4px;overflow:hidden}.progress{height:100%;background:linear-gradient(90deg,#1890ff,#52c41a);border-radius:4px}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

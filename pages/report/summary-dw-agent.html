@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปฝาก/ถอน Agent - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>รายงาน</span><i class="fas fa-chevron-right"></i><span class="active">สรุปฝาก/ถอน Agent</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">สรุปฝาก/ถอน Agent</h1></div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="filter-row">
+                            <div class="filter-item"><label>วันที่เริ่มต้น</label><input type="date" class="form-control"></div>
+                            <div class="filter-item"><label>วันที่สิ้นสุด</label><input type="date" class="form-control"></div>
+                            <div class="filter-item"><label>Agent</label><select class="form-control"><option>ทั้งหมด</option><option>agent001</option><option>agent002</option></select></div>
+                            <div class="filter-item"><button class="btn btn-primary"><i class="fas fa-search"></i> ค้นหา</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>Agent</th><th>สมาชิก</th><th>ยอดฝาก</th><th>ยอดถอน</th><th>ส่วนต่าง</th><th>รายการฝาก</th><th>รายการถอน</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>agent001</strong></td><td>125 คน</td><td class="text-success">฿ 5,250,000</td><td class="text-danger">฿ 3,500,000</td><td class="text-success">+฿ 1,750,000</td><td>456</td><td>234</td></tr>
+                                    <tr><td><strong>agent002</strong></td><td>89 คน</td><td class="text-success">฿ 3,850,000</td><td class="text-danger">฿ 2,800,000</td><td class="text-success">+฿ 1,050,000</td><td>312</td><td>189</td></tr>
+                                    <tr><td><strong>agent003</strong></td><td>67 คน</td><td class="text-success">฿ 2,500,000</td><td class="text-danger">฿ 1,800,000</td><td class="text-success">+฿ 700,000</td><td>198</td><td>145</td></tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="total-row"><td><strong>รวม</strong></td><td><strong>281 คน</strong></td><td class="text-success"><strong>฿ 11,600,000</strong></td><td class="text-danger"><strong>฿ 8,100,000</strong></td><td class="text-success"><strong>+฿ 3,500,000</strong></td><td><strong>966</strong></td><td><strong>568</strong></td></tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.total-row{background:#f5f5f5;font-weight:600}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อัตราจ่าย - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>หวย</span><i class="fas fa-chevron-right"></i><span class="active">อัตราจ่าย</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">อัตราจ่ายหวย</h1></div>
+                <div class="tabs mb-4">
+                    <button class="tab-btn active">หวยรัฐบาล</button>
+                    <button class="tab-btn">หวยลาว</button>
+                    <button class="tab-btn">หวยฮานอย</button>
+                    <button class="tab-btn">หวยมาเลย์</button>
+                    <button class="tab-btn">หวยหุ้น</button>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">หวยรัฐบาลไทย</h3></div>
+                    <div class="card-body">
+                        <div class="rate-grid">
+                            <div class="rate-card"><div class="rate-title">3 ตัวบน</div><div class="rate-value">x 900</div><div class="rate-range">แทง 1 - 1,000 บาท</div></div>
+                            <div class="rate-card"><div class="rate-title">3 ตัวโต๊ด</div><div class="rate-value">x 150</div><div class="rate-range">แทง 1 - 1,000 บาท</div></div>
+                            <div class="rate-card"><div class="rate-title">2 ตัวบน</div><div class="rate-value">x 90</div><div class="rate-range">แทง 1 - 5,000 บาท</div></div>
+                            <div class="rate-card"><div class="rate-title">2 ตัวล่าง</div><div class="rate-value">x 90</div><div class="rate-range">แทง 1 - 5,000 บาท</div></div>
+                            <div class="rate-card"><div class="rate-title">วิ่งบน</div><div class="rate-value">x 3.2</div><div class="rate-range">แทง 1 - 10,000 บาท</div></div>
+                            <div class="rate-card"><div class="rate-title">วิ่งล่าง</div><div class="rate-value">x 4.2</div><div class="rate-range">แทง 1 - 10,000 บาท</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.tabs{display:flex;gap:8px;border-bottom:2px solid var(--border-color)}.tab-btn{padding:12px 24px;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}.tab-btn.active{color:var(--primary-color);border-bottom-color:var(--primary-color);font-weight:600}.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:768px){.rate-grid{grid-template-columns:repeat(2,1fr)}}.rate-card{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:20px;border-radius:12px;text-align:center}.rate-title{font-size:14px;opacity:0.9;margin-bottom:8px}.rate-value{font-size:28px;font-weight:700;margin-bottom:8px}.rate-range{font-size:12px;opacity:0.8}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

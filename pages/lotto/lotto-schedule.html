@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางออกหวย - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>หวย</span><i class="fas fa-chevron-right"></i><span class="active">ตารางออกหวย</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ตารางออกหวย</h1></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>หวย</th><th>วันออก</th><th>เวลาปิดรับ</th><th>เวลาออกผล</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>🇹🇭 หวยรัฐบาล</td><td>1, 16 ของเดือน</td><td>14:30</td><td>16:30</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>🇱🇦 หวยลาว</td><td>จันทร์, พุธ, ศุกร์</td><td>20:00</td><td>21:00</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>🇻🇳 หวยฮานอย</td><td>ทุกวัน</td><td>18:00</td><td>18:30</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>🇲🇾 หวยมาเลย์</td><td>พุธ, เสาร์, อาทิตย์</td><td>18:30</td><td>19:00</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>📈 หวยหุ้นไทย</td><td>จันทร์ - ศุกร์</td><td>11:00, 12:30</td><td>12:00, 16:30</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>📈 หวยหุ้นจีน</td><td>จันทร์ - ศุกร์</td><td>10:00</td><td>11:30</td><td><span class="tag tag-gray">ปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

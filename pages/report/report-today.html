@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานวันนี้ - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>รายงาน</span><i class="fas fa-chevron-right"></i><span class="active">รายงานวันนี้</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">รายงานสรุปวันนี้</h1><span class="text-muted">5 ธันวาคม 2024</span></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-arrow-down"></i></div><div class="stat-info"><h3>฿ 1,250,000</h3><p>ยอดฝากวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-danger"><i class="fas fa-arrow-up"></i></div><div class="stat-info"><h3>฿ 850,000</h3><p>ยอดถอนวันนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-ticket-alt"></i></div><div class="stat-info"><h3>฿ 2,500,000</h3><p>ยอดแทงหวย</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-chart-pie"></i></div><div class="stat-info"><h3>฿ 400,000</h3><p>กำไรสุทธิ</p></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">สรุปฝาก/ถอน</h3></div>
+                            <div class="card-body">
+                                <div class="summary-item"><span>ฝากทั้งหมด</span><span class="text-success">฿ 1,250,000</span></div>
+                                <div class="summary-item"><span>ถอนทั้งหมด</span><span class="text-danger">฿ 850,000</span></div>
+                                <div class="summary-item"><span>ส่วนต่าง</span><span class="text-primary">฿ 400,000</span></div>
+                                <div class="summary-item"><span>จำนวนรายการฝาก</span><span>245 รายการ</span></div>
+                                <div class="summary-item"><span>จำนวนรายการถอน</span><span>156 รายการ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header"><h3 class="card-title">สรุปหวย</h3></div>
+                            <div class="card-body">
+                                <div class="summary-item"><span>ยอดแทงทั้งหมด</span><span>฿ 2,500,000</span></div>
+                                <div class="summary-item"><span>ยอดจ่ายรางวัล</span><span class="text-danger">฿ 1,800,000</span></div>
+                                <div class="summary-item"><span>กำไรหวย</span><span class="text-success">฿ 700,000</span></div>
+                                <div class="summary-item"><span>จำนวนโพย</span><span>3,456 โพย</span></div>
+                                <div class="summary-item"><span>โพยถูกรางวัล</span><span>234 โพย</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.row{display:flex;flex-wrap:wrap;margin:-12px}.col-md-6{flex:0 0 50%;max-width:50%;padding:12px}@media(max-width:768px){.col-md-6{flex:0 0 100%;max-width:100%}}.summary-item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0f0f0}.summary-item:last-child{border-bottom:none}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

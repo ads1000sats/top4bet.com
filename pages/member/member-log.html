@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติสมาชิก - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>สมาชิก</span><i class="fas fa-chevron-right"></i><span class="active">ประวัติสมาชิก</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ประวัติการใช้งานสมาชิก</h1></div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="filter-row">
+                            <div class="filter-item"><label>ค้นหาสมาชิก</label><input type="text" class="form-control" placeholder="Username"></div>
+                            <div class="filter-item"><label>ประเภท</label><select class="form-control"><option>ทั้งหมด</option><option>เข้าสู่ระบบ</option><option>แก้ไขข้อมูล</option><option>เปลี่ยนรหัสผ่าน</option></select></div>
+                            <div class="filter-item"><label>วันที่</label><input type="date" class="form-control"></div>
+                            <div class="filter-item"><button class="btn btn-primary"><i class="fas fa-search"></i> ค้นหา</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>วันที่/เวลา</th><th>สมาชิก</th><th>กิจกรรม</th><th>IP Address</th><th>Device</th></tr></thead>
+                                <tbody>
+                                    <tr><td>05/12/2024 14:30:25</td><td>user001</td><td><span class="tag tag-blue">เข้าสู่ระบบ</span></td><td>192.168.1.xxx</td><td><i class="fas fa-mobile-alt"></i> iPhone 15</td></tr>
+                                    <tr><td>05/12/2024 10:15:10</td><td>user015</td><td><span class="tag tag-yellow">แก้ไขข้อมูล</span></td><td>192.168.1.xxx</td><td><i class="fas fa-desktop"></i> Chrome / Windows</td></tr>
+                                    <tr><td>04/12/2024 16:45:30</td><td>user023</td><td><span class="tag tag-red">เปลี่ยนรหัสผ่าน</span></td><td>192.168.1.xxx</td><td><i class="fas fa-mobile-alt"></i> Android</td></tr>
+                                    <tr><td>04/12/2024 12:20:55</td><td>user001</td><td><span class="tag tag-green">ออกจากระบบ</span></td><td>192.168.1.xxx</td><td><i class="fas fa-mobile-alt"></i> iPhone 15</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

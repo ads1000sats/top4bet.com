@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรโมชั่นวันเกิด - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>โปรโมชั่น</span><i class="fas fa-chevron-right"></i><span class="active">โปรโมชั่นวันเกิด</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">โปรโมชั่นวันเกิด 🎂</h1></div>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card"><div class="stat-icon bg-primary"><i class="fas fa-birthday-cake"></i></div><div class="stat-info"><h3>45</h3><p>สมาชิกวันเกิดเดือนนี้</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-success"><i class="fas fa-gift"></i></div><div class="stat-info"><h3>32</h3><p>รับโบนัสแล้ว</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-warning"><i class="fas fa-clock"></i></div><div class="stat-info"><h3>13</h3><p>รอรับโบนัส</p></div></div>
+                    <div class="stat-card"><div class="stat-icon bg-info"><i class="fas fa-coins"></i></div><div class="stat-info"><h3>฿ 16,000</h3><p>โบนัสที่แจกไป</p></div></div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header"><h3 class="card-title">ตั้งค่าโปรโมชั่น</h3></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group"><label>จำนวนโบนัส (บาท)</label><input type="number" class="form-control" value="500"></div>
+                                <div class="form-group"><label>เทิร์นโอเวอร์ (เท่า)</label><input type="number" class="form-control" value="1"></div>
+                                <div class="form-group"><label>สถานะ</label><select class="form-control"><option value="active">เปิดใช้งาน</option><option value="inactive">ปิดใช้งาน</option></select></div>
+                            </div>
+                            <button class="btn btn-primary"><i class="fas fa-save"></i> บันทึก</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">สมาชิกที่มีวันเกิดเดือนนี้</h3></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>Username</th><th>ชื่อ</th><th>วันเกิด</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>user001</td><td>สมชาย ใจดี</td><td>5 ธ.ค.</td><td><span class="tag tag-green">รับแล้ว</span></td><td><button class="btn btn-sm btn-info"><i class="fas fa-eye"></i></button></td></tr>
+                                    <tr><td>user015</td><td>สมหญิง รักดี</td><td>10 ธ.ค.</td><td><span class="tag tag-yellow">รอรับ</span></td><td><button class="btn btn-sm btn-success"><i class="fas fa-gift"></i> ให้โบนัส</button></td></tr>
+                                    <tr><td>user023</td><td>มานะ ขยัน</td><td>15 ธ.ค.</td><td><span class="tag tag-yellow">รอรับ</span></td><td><button class="btn btn-sm btn-success"><i class="fas fa-gift"></i> ให้โบนัส</button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../app.js"></script>
+</body>
+</html>
+

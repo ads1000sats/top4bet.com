@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระดับชิงโชค - HUAY Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header"><a href="../../index.html" class="logo-link"><img src="../../assets/images/logo.webp" alt="HUAY Backoffice" class="logo-img"></a></div>
+            <nav class="sidebar-menu" id="sidebarMenu"></nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="breadcrumb"><span>ชิงโชค</span><i class="fas fa-chevron-right"></i><span class="active">ระดับ</span></div>
+                </div>
+                <div class="header-right">
+                    <div class="header-item"><i class="fas fa-bell"></i><span class="badge">3</span></div>
+                    <div class="header-item user-dropdown" id="userDropdown"><i class="fas fa-user-circle"></i><span id="userName">admin</span></div>
+                </div>
+            </header>
+            <div class="page-content">
+                <div class="page-header"><h1 class="page-title">ระดับชิงโชค</h1><button class="btn btn-primary"><i class="fas fa-plus"></i> เพิ่มระดับ</button></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead><tr><th>ระดับ</th><th>ชื่อ</th><th>คะแนนขั้นต่ำ</th><th>สิทธิ์หมุน/วัน</th><th>โบนัส</th><th>สถานะ</th><th>จัดการ</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1</td><td><span class="level-badge bronze">🥉 Bronze</span></td><td>0</td><td>1 ครั้ง</td><td>-</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>2</td><td><span class="level-badge silver">🥈 Silver</span></td><td>1,000</td><td>2 ครั้ง</td><td>+10%</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>3</td><td><span class="level-badge gold">🥇 Gold</span></td><td>5,000</td><td>3 ครั้ง</td><td>+20%</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>4</td><td><span class="level-badge platinum">💎 Platinum</span></td><td>20,000</td><td>5 ครั้ง</td><td>+30%</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                    <tr><td>5</td><td><span class="level-badge diamond">👑 Diamond</span></td><td>50,000</td><td>10 ครั้ง</td><td>+50%</td><td><span class="tag tag-green">เปิด</span></td><td><button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <style>.level-badge{padding:4px 12px;border-radius:20px;font-weight:600}.bronze{background:#cd7f32;color:white}.silver{background:#c0c0c0;color:#333}.gold{background:#ffd700;color:#333}.platinum{background:#e5e4e2;color:#333}.diamond{background:linear-gradient(135deg,#b9f2ff,#89cff0);color:#333}</style>
+    <script src="../../app.js"></script>
+</body>
+</html>
+
